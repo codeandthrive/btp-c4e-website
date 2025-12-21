@@ -208,7 +208,7 @@
         <!-- Page Banner End -->
 
         <!-- Contact Start -->
-        <div class="section contact-section section-padding-02">
+        <div class="section contact-section section-padding-02" style="padding-bottom: 80px;">
             <div class="container">
                 <div class="contact-wrap">
                     <div class="row">
@@ -248,40 +248,45 @@
                             <div class="contact-form" data-aos-delay="1000" data-aos="fade-up">
                                 <!-- contact Form Wrap Start -->
                                 <div class="contact-form-wrap">
-                                    <form action="#">
+                                    <form action="https://api.web3forms.com/submit" method="POST">
+                                        <!-- Web3Forms Access Key -->
+                                        <input type="hidden" name="access_key" value="4a3aca6f-b743-4152-8eec-33d7f6aeebc5">
+                                        <input type="hidden" name="subject" value="New Contact Form Submission - BTP C4E">
+                                        <input type="hidden" name="from_name" value="BTP C4E Website">
+                                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <!--  Single Form Start  -->
                                                 <div class="single-form">
-                                                    <input class="form-control" type="text" placeholder="Your Name">
+                                                    <input class="form-control" type="text" name="name" placeholder="Your Name" required>
                                                 </div>
                                                 <!--  Single Form End  -->
                                             </div>
                                             <div class="col-md-6">
                                                 <!--  Single Form Start  -->
                                                 <div class="single-form">
-                                                    <input class="form-control" type="email" placeholder="Your Email">
+                                                    <input class="form-control" type="email" name="email" placeholder="Your Email" required>
                                                 </div>
                                                 <!--  Single Form End  -->
                                             </div>
                                             <div class="col-md-6">
                                                 <!--  Single Form Start  -->
                                                 <div class="single-form">
-                                                    <input class="form-control" type="email" placeholder="Phone Number">
+                                                    <input class="form-control" type="tel" name="phone" placeholder="Phone Number">
                                                 </div>
                                                 <!--  Single Form End  -->
                                             </div>
                                             <div class="col-md-6">
                                                 <!--  Single Form Start  -->
                                                 <div class="single-form">
-                                                    <input class="form-control" type="text" placeholder="Your Subject">
+                                                    <input class="form-control" type="text" name="subject" placeholder="Your Subject" required>
                                                 </div>
                                                 <!--  Single Form End  -->
                                             </div>
                                             <div class="col-md-12">
                                                 <!--  Single Form Start  -->
                                                 <div class="single-form">
-                                                    <textarea class="form-control" placeholder="Your Message"></textarea>
+                                                    <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
                                                 </div>
                                                 <!--  Single Form End  -->
                                             </div>
