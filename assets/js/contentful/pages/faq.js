@@ -1,27 +1,44 @@
 /**
  * FAQ Page Content Loader
- * Updates only images from Contentful, keeps static HTML text content
+ * Loads and renders Contentful content for the FAQ page
  */
 
 (function () {
   async function initFaqPage() {
-    // Check if Contentful is configured
     if (!ContentfulClient.isConfigured()) {
       console.warn('Contentful not configured. Using static content.');
       return;
     }
 
     try {
-      // Initialize common elements (logo images only)
+      // Initialize common elements
       await ContentRenderer.initCommon();
 
-      // Load FAQ page data for images only
+      // Load FAQ page specific content
       const faqPageData = await ContentfulClient.getFaqPage();
 
       if (faqPageData) {
         const { entry: faqPage, includes } = faqPageData;
 
-        // Update FAQ section image from Contentful
+        // Update meta tags
+        ContentRenderer.updateMetaTags(
+          faqPage.fields.metaTitle,
+          faqPage.fields.metaDescription
+        );
+
+        // Banner title
+        const bannerTitle = document.querySelector('.page-banner-content .title');
+        if (bannerTitle && faqPage.fields.bannerTitle) {
+          bannerTitle.textContent = faqPage.fields.bannerTitle;
+        }
+
+        // Section title
+        const sectionTitle = document.querySelector('.faq-section .section-title .title, #faq-section-title');
+        if (sectionTitle && faqPage.fields.sectionTitle) {
+          sectionTitle.textContent = faqPage.fields.sectionTitle;
+        }
+
+        // FAQ image
         const faqImage = ContentfulClient.resolveAssetUrl(faqPage, 'faqImage', includes);
         if (faqImage) {
           const faqImg = document.querySelector('.faq-images img, #faq-image');
@@ -29,8 +46,8 @@
         }
       }
 
-      // Static HTML content is used for FAQ questions and answers
-      // This avoids duplicate rendering issues
+      // Load all FAQs (not just home page ones)
+      await ContentRenderer.renderFaqs('#faq-accordion', false, 'faqPageAccordion');
 
     } catch (error) {
       console.error('Failed to initialize FAQ page:', error);

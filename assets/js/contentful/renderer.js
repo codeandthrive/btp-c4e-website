@@ -81,21 +81,31 @@ const ContentRenderer = (function () {
   }
 
   /**
-   * Render navigation menu
+   * Render navigation menu - updates existing menu items
    */
   async function renderNavigation() {
     try {
       const navItems = await ContentfulClient.getNavigation();
-      const menuContainer = document.querySelector('#mobile-menu ul');
-      if (!menuContainer || navItems.length === 0) return;
+      if (navItems.length === 0) return;
 
       const regularItems = navItems.filter(item => !item.fields.isCtaButton);
       const ctaItem = navItems.find(item => item.fields.isCtaButton);
 
-      // Render menu items
-      menuContainer.innerHTML = regularItems.map(item => `
-        <li><a href="${item.fields.url}">${item.fields.title}</a></li>
-      `).join('');
+      // Update the original desktop menu
+      const desktopMenu = document.querySelector('.main-menu nav#mobile-menu > ul');
+      if (desktopMenu) {
+        desktopMenu.innerHTML = regularItems.map(item => `
+          <li><a href="${item.fields.url}">${item.fields.title}</a></li>
+        `).join('');
+      }
+
+      // Also update the mean-menu clone if it exists
+      const mobileMenu = document.querySelector('.mean-nav > ul');
+      if (mobileMenu) {
+        mobileMenu.innerHTML = regularItems.map(item => `
+          <li><a href="${item.fields.url}">${item.fields.title}</a></li>
+        `).join('');
+      }
 
       // Update CTA button
       if (ctaItem) {
@@ -231,12 +241,14 @@ const ContentRenderer = (function () {
 
       container.innerHTML = pillars.map((pillar, index) => `
         <div class="col-lg-4 col-md-6 mb-4" data-aos-delay="${700 + (index * 100)}" data-aos="fade-up">
-          <div class="pillar-card" style="background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); height: 100%;">
-            <div class="pillar-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-              <i class="${pillar.fields.icon}" style="color: #fff; font-size: 24px;"></i>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="${pillar.fields.icon}"></i>
             </div>
-            <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">${pillar.fields.name}</h4>
-            <p style="color: #666; margin: 0; line-height: 1.6;">${pillar.fields.description}</p>
+            <div class="pillar-content">
+              <h4 class="pillar-title">${pillar.fields.name}</h4>
+              <p class="pillar-desc">${pillar.fields.description}</p>
+            </div>
           </div>
         </div>
       `).join('');
@@ -259,7 +271,12 @@ const ContentRenderer = (function () {
   async function renderServices(containerSelector) {
     try {
       showLoading(containerSelector);
-      const { items: services, includes } = await ContentfulClient.getServices();
+      const data = await ContentfulClient.getServices();
+      if (!data) {
+        hideLoading(containerSelector);
+        return;
+      }
+      const { items: services, includes } = data;
       const container = document.querySelector(containerSelector);
       if (!container || services.length === 0) {
         hideLoading(containerSelector);
@@ -423,7 +440,8 @@ const ContentRenderer = (function () {
 
   /**
    * Initialize common elements (shared across all pages)
-   * Only updates images from Contentful, keeps static HTML text
+   * Renders logo, footer, sidebar from Contentful
+   * NOTE: Navigation is kept as static HTML to avoid duplication issues with MeanMenu
    */
   async function initCommon() {
     // Check if Contentful is configured
@@ -432,9 +450,13 @@ const ContentRenderer = (function () {
       return;
     }
 
-    // Only update logo images from Contentful
-    // Skip navigation, footer, sidebar text updates to avoid duplicates
-    await renderLogo();
+    // Render common elements from Contentful
+    // Skip navigation to avoid duplication with MeanMenu plugin
+    await Promise.all([
+      renderLogo(),
+      renderFooter(),
+      renderSidebar()
+    ]);
   }
 
   /**
