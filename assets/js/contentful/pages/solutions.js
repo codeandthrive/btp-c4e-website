@@ -1,44 +1,30 @@
 /**
  * Solutions Page Content Loader
- * Loads and renders Contentful content for the solutions page
+ * Updates only images from Contentful, keeps static HTML text content
  */
 
 (function () {
   async function initSolutionsPage() {
+    // Check if Contentful is configured
     if (!ContentfulClient.isConfigured()) {
       console.warn('Contentful not configured. Using static content.');
       return;
     }
 
     try {
-      // Initialize common elements
+      // Initialize common elements (logo images only)
       await ContentRenderer.initCommon();
 
-      // Load solutions page specific content
-      const solutionsPage = await ContentfulClient.getSolutionsPage();
+      // Load solutions page data for images only
+      const solutionsPageData = await ContentfulClient.getSolutionsPage();
 
-      if (solutionsPage) {
-        // Update meta tags
-        ContentRenderer.updateMetaTags(
-          solutionsPage.fields.metaTitle,
-          solutionsPage.fields.metaDescription
-        );
-
-        // Banner title
-        const bannerTitle = document.querySelector('.page-banner-content .title');
-        if (bannerTitle && solutionsPage.fields.bannerTitle) {
-          bannerTitle.textContent = solutionsPage.fields.bannerTitle;
-        }
-
-        // Subtitle
-        const subtitle = document.querySelector('.solutions-subtitle, .section-subtitle');
-        if (subtitle && solutionsPage.fields.subtitle) {
-          subtitle.textContent = solutionsPage.fields.subtitle;
-        }
+      if (solutionsPageData) {
+        // Update any page-specific images from Contentful if they exist
+        // Currently solutions page uses icons from static HTML
       }
 
-      // Load solutions
-      await ContentRenderer.renderSolutions('#migration-accordion', '#iflows-accordion');
+      // Static HTML content is used for text, migration accelerators, iFlows
+      // This avoids duplicate rendering issues
 
     } catch (error) {
       console.error('Failed to initialize solutions page:', error);

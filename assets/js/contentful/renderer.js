@@ -423,6 +423,7 @@ const ContentRenderer = (function () {
 
   /**
    * Initialize common elements (shared across all pages)
+   * Only updates images from Contentful, keeps static HTML text
    */
   async function initCommon() {
     // Check if Contentful is configured
@@ -431,12 +432,9 @@ const ContentRenderer = (function () {
       return;
     }
 
-    await Promise.all([
-      renderLogo(),
-      renderNavigation(),
-      renderFooter(),
-      renderSidebar()
-    ]);
+    // Only update logo images from Contentful
+    // Skip navigation, footer, sidebar text updates to avoid duplicates
+    await renderLogo();
   }
 
   /**
