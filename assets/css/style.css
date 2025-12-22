@@ -7576,3 +7576,57 @@ textarea:-ms-input-placeholder {
   visibility: visible;
   transform: translateX(0);
 }
+
+/* ===================================
+   Contentful CMS Loading States
+   =================================== */
+
+/* Loading state for content containers */
+.contentful-loading {
+  position: relative;
+  min-height: 200px;
+}
+
+.contentful-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: contentful-spin 1s linear infinite;
+  z-index: 10;
+}
+
+@keyframes contentful-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.contentful-error {
+  text-align: center;
+  padding: 40px;
+  color: #dc3545;
+  font-size: 16px;
+  background: #fff5f5;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Skeleton loading for text placeholders */
+.contentful-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: contentful-shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes contentful-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

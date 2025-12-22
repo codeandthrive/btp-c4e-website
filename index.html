@@ -220,7 +220,7 @@
                     </div>
                     <p class="mt-3" data-aos-delay="600" data-aos="fade-up">Comprehensive coverage across all SAP Business Technology Platform pillars</p>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-5" id="pillars-container">
                     <!-- App Dev Card -->
                     <div class="col-lg-4 col-md-6 mb-4" data-aos-delay="700" data-aos="fade-up">
                         <div class="pillar-card">
@@ -579,7 +579,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="features-item-wrap" data-aos-delay="800" data-aos="fade-up">
-                                        <div class="row">
+                                        <div class="row" id="services-container">
                                             <div class="col-md-6">
                                                 <!-- Features Item Start -->
                                                 <div class="features-item">
@@ -697,7 +697,7 @@
                             <!-- Faq Right Start -->
                             <div class="faq-right" data-aos-delay="800" data-aos="fade-up">
                                 <!-- Faq Accordion Start -->
-                                <div class="faq-accordion">
+                                <div class="faq-accordion" id="faq-container">
                                     <div class="accordion" id="accordionExampleTwo">
                                         <div class="accordion-item">
                                             <div class="accordion-header" id="headingFour">
@@ -890,6 +890,11 @@
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Contentful CMS Integration -->
+    <script src="assets/js/contentful/client.js"></script>
+    <script src="assets/js/contentful/renderer.js"></script>
+    <script src="assets/js/contentful/pages/home.js"></script>
 
 </body>
 
