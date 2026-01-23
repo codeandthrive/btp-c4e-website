@@ -155,11 +155,12 @@ const ContentRenderer = (function () {
 
       // Global presence locations
       if (locations.length > 0) {
-        const locationsContainer = document.querySelector('.footer-widget:last-child .link ul, #footer-locations');
+        const locationsContainer = document.querySelector('#footer-locations, .footer-widget:last-child .link ul');
         if (locationsContainer) {
-          locationsContainer.innerHTML = locations.map(loc =>
-            `<li>${loc.fields.city} (${loc.fields.region})</li>`
-          ).join('');
+          locationsContainer.innerHTML = locations.map(loc => {
+            const region = loc.fields.region ? ` (${loc.fields.region})` : '';
+            return `<li>${loc.fields.city}${region}</li>`;
+          }).join('');
         }
       }
 
@@ -215,9 +216,12 @@ const ContentRenderer = (function () {
 
       // Locations in sidebar
       if (locations.length > 0) {
-        const locationLink = document.querySelector('.sidebar__contact-text a[target="_blank"]');
+        const locationLink = document.querySelector('#sidebar-locations, .sidebar__contact-text a[target="_blank"]');
         if (locationLink) {
-          const cities = locations.map(l => l.fields.city).join(', ');
+          const cities = locations.map(l => {
+            const region = l.fields.region ? ` (${l.fields.region})` : '';
+            return `${l.fields.city}${region}`;
+          }).join(', ');
           locationLink.textContent = `Global Presence: ${cities}`;
         }
       }

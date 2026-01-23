@@ -150,7 +150,7 @@
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
                   <div class="sidebar__contact-text">
-                    <a target="_blank" href="#"
+                    <a target="_blank" href="#" id="sidebar-locations"
                       >Global Presence: Bangalore, Dallas, Dubai, Germany,
                       Sydney</a
                     >
@@ -231,7 +231,7 @@
                   data-aos="fade-up"
                 >
                   <div class="image">
-                    <img src="assets/images/over-1.png" alt="" />
+                    <img id="consulting-image" src="assets/images/over-1.png" alt="" />
                   </div>
                 </div>
                 <!-- Overview Image Wrap End -->
@@ -451,7 +451,7 @@
                   data-aos="fade-up"
                 >
                   <div class="image">
-                    <img src="assets/images/over-10.png" alt="" />
+                    <img id="development-image" src="assets/images/over-10.png" alt="" />
                   </div>
                 </div>
                 <!-- Overview Image Wrap End -->
@@ -487,198 +487,102 @@
                 data-aos-delay="700"
                 data-aos="fade-up"
               >
-                <div class="row">
-                  <div class="col-lg-4">
-                    <!-- Features Item Start -->
-                    <div class="features-item">
-                      <div class="feat-icon-wrap">
-                        <div class="icon-img">
-                          <img src="assets/images/icon/feat-icon1.png" alt="" />
-                        </div>
-                        <div class="icon-right">
-                          <svg
-                            width="28"
-                            height="27"
-                            viewBox="0 0 28 27"
-                            fill="none"
-                          >
-                            <path
-                              d="M19.5817 16.5247C19.5646 16.6917 19.5813 16.8604 19.6309 17.0208C19.6804 17.1812 19.7618 17.3299 19.8701 17.4582C19.9784 17.5865 20.1114 17.6916 20.2612 17.7673C20.411 17.8431 20.5745 17.8879 20.742 17.899C20.9095 17.9102 21.0775 17.8875 21.2361 17.8323C21.3946 17.7772 21.5404 17.6906 21.6648 17.5779C21.7891 17.4651 21.8895 17.3285 21.9599 17.1761C22.0303 17.0237 22.0693 16.8587 22.0746 16.6909L22.7017 7.28369C22.713 7.11993 22.6918 6.95556 22.6393 6.80002C22.5869 6.64447 22.5043 6.50081 22.3962 6.37728C22.2881 6.25375 22.1567 6.15278 22.0095 6.08016C21.8623 6.00755 21.7022 5.96472 21.5384 5.95414L12.1311 5.32699C11.9641 5.30992 11.7954 5.32667 11.635 5.37622C11.4747 5.42577 11.3259 5.50713 11.1976 5.61542C11.0694 5.72371 10.9642 5.85673 10.8885 6.00654C10.8128 6.15634 10.768 6.31987 10.7568 6.48737C10.7457 6.65486 10.7683 6.82288 10.8235 6.98142C10.8787 7.13995 10.9652 7.28575 11.078 7.41011C11.1907 7.53447 11.3274 7.63485 11.4798 7.70526C11.6322 7.77566 11.7972 7.81465 11.9649 7.8199L18.3618 8.24636L6.20774 18.8812C5.95825 19.0995 5.80569 19.408 5.78364 19.7388C5.76159 20.0696 5.87184 20.3956 6.09015 20.6451C6.30846 20.8946 6.61693 21.0471 6.94772 21.0692C7.27851 21.0912 7.60451 20.981 7.854 20.7627L20.0081 10.1278L19.5817 16.5247Z"
-                            />
-                          </svg>
-                        </div>
+                <div class="row g-4" id="services-cards-container">
+                  <div class="col-md-6">
+                    <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); height: 100%;">
+                      <div class="service-icon" style="margin-bottom: 20px;">
+                        <img src="assets/images/icon/feat-icon1.png" alt="Consulting" style="width: 60px; height: 60px;" />
                       </div>
-                      <div class="feat-content">
-                        <h3 class="title">
-                          <a href="contact.html">Consulting</a>
-                        </h3>
-                        <p>
-                          Strategic guidance for <br />
-                          your BTP transformation
-                        </p>
-                      </div>
+                      <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">Consulting</h3>
+                      <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Strategic SAP BTP guidance spanning strategy, architecture, and value realization.
+                      </p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>BTP Strategy &amp; Roadmap</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Enterprise Architecture</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Value Realization</li>
+                      </ul>
                     </div>
-                    <!-- Features Item End -->
                   </div>
-                  <div class="col-lg-4">
-                    <!-- Features Item Start -->
-                    <div class="features-item">
-                      <div class="feat-icon-wrap">
-                        <div class="icon-img">
-                          <img src="assets/images/icon/feat-icon2.png" alt="" />
-                        </div>
-                        <div class="icon-right">
-                          <svg
-                            width="28"
-                            height="27"
-                            viewBox="0 0 28 27"
-                            fill="none"
-                          >
-                            <path
-                              d="M19.5817 16.5247C19.5646 16.6917 19.5813 16.8604 19.6309 17.0208C19.6804 17.1812 19.7618 17.3299 19.8701 17.4582C19.9784 17.5865 20.1114 17.6916 20.2612 17.7673C20.411 17.8431 20.5745 17.8879 20.742 17.899C20.9095 17.9102 21.0775 17.8875 21.2361 17.8323C21.3946 17.7772 21.5404 17.6906 21.6648 17.5779C21.7891 17.4651 21.8895 17.3285 21.9599 17.1761C22.0303 17.0237 22.0693 16.8587 22.0746 16.6909L22.7017 7.28369C22.713 7.11993 22.6918 6.95556 22.6393 6.80002C22.5869 6.64447 22.5043 6.50081 22.3962 6.37728C22.2881 6.25375 22.1567 6.15278 22.0095 6.08016C21.8623 6.00755 21.7022 5.96472 21.5384 5.95414L12.1311 5.32699C11.9641 5.30992 11.7954 5.32667 11.635 5.37622C11.4747 5.42577 11.3259 5.50713 11.1976 5.61542C11.0694 5.72371 10.9642 5.85673 10.8885 6.00654C10.8128 6.15634 10.768 6.31987 10.7568 6.48737C10.7457 6.65486 10.7683 6.82288 10.8235 6.98142C10.8787 7.13995 10.9652 7.28575 11.078 7.41011C11.1907 7.53447 11.3274 7.63485 11.4798 7.70526C11.6322 7.77566 11.7972 7.81465 11.9649 7.8199L18.3618 8.24636L6.20774 18.8812C5.95825 19.0995 5.80569 19.408 5.78364 19.7388C5.76159 20.0696 5.87184 20.3956 6.09015 20.6451C6.30846 20.8946 6.61693 21.0471 6.94772 21.0692C7.27851 21.0912 7.60451 20.981 7.854 20.7627L20.0081 10.1278L19.5817 16.5247Z"
-                            />
-                          </svg>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); height: 100%;">
+                      <div class="service-icon" style="margin-bottom: 20px;">
+                        <img src="assets/images/icon/feat-icon2.png" alt="Enablement" style="width: 60px; height: 60px;" />
                       </div>
-                      <div class="feat-content">
-                        <h3 class="title">
-                          <a href="contact.html">Enablement</a>
-                        </h3>
-                        <p>
-                          Empower your teams with <br />
-                          SAP BTP expertise
-                        </p>
-                      </div>
+                      <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">Enablement</h3>
+                      <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Upskill internal teams with curated playbooks, academies, and governance models.
+                      </p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>BTP Academy Programs</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Center of Excellence Setup</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Governance Frameworks</li>
+                      </ul>
                     </div>
-                    <!-- Features Item End -->
                   </div>
-                  <div class="col-lg-4">
-                    <!-- Features Item Start -->
-                    <div class="features-item">
-                      <div class="feat-icon-wrap">
-                        <div class="icon-img">
-                          <img src="assets/images/icon/feat-icon3.png" alt="" />
-                        </div>
-                        <div class="icon-right">
-                          <svg
-                            width="28"
-                            height="27"
-                            viewBox="0 0 28 27"
-                            fill="none"
-                          >
-                            <path
-                              d="M19.5817 16.5247C19.5646 16.6917 19.5813 16.8604 19.6309 17.0208C19.6804 17.1812 19.7618 17.3299 19.8701 17.4582C19.9784 17.5865 20.1114 17.6916 20.2612 17.7673C20.411 17.8431 20.5745 17.8879 20.742 17.899C20.9095 17.9102 21.0775 17.8875 21.2361 17.8323C21.3946 17.7772 21.5404 17.6906 21.6648 17.5779C21.7891 17.4651 21.8895 17.3285 21.9599 17.1761C22.0303 17.0237 22.0693 16.8587 22.0746 16.6909L22.7017 7.28369C22.713 7.11993 22.6918 6.95556 22.6393 6.80002C22.5869 6.64447 22.5043 6.50081 22.3962 6.37728C22.2881 6.25375 22.1567 6.15278 22.0095 6.08016C21.8623 6.00755 21.7022 5.96472 21.5384 5.95414L12.1311 5.32699C11.9641 5.30992 11.7954 5.32667 11.635 5.37622C11.4747 5.42577 11.3259 5.50713 11.1976 5.61542C11.0694 5.72371 10.9642 5.85673 10.8885 6.00654C10.8128 6.15634 10.768 6.31987 10.7568 6.48737C10.7457 6.65486 10.7683 6.82288 10.8235 6.98142C10.8787 7.13995 10.9652 7.28575 11.078 7.41011C11.1907 7.53447 11.3274 7.63485 11.4798 7.70526C11.6322 7.77566 11.7972 7.81465 11.9649 7.8199L18.3618 8.24636L6.20774 18.8812C5.95825 19.0995 5.80569 19.408 5.78364 19.7388C5.76159 20.0696 5.87184 20.3956 6.09015 20.6451C6.30846 20.8946 6.61693 21.0471 6.94772 21.0692C7.27851 21.0912 7.60451 20.981 7.854 20.7627L20.0081 10.1278L19.5817 16.5247Z"
-                            />
-                          </svg>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); height: 100%;">
+                      <div class="service-icon" style="margin-bottom: 20px;">
+                        <img src="assets/images/icon/feat-icon3.png" alt="Development" style="width: 60px; height: 60px;" />
                       </div>
-                      <div class="feat-content">
-                        <h3 class="title">
-                          <a href="contact.html">Development</a>
-                        </h3>
-                        <p>
-                          Custom applications and <br />
-                          integration development
-                        </p>
-                      </div>
+                      <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">Development</h3>
+                      <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Cloud-native applications, UX extensions, and automation built on SAP BTP.
+                      </p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>CAP/Fiori Apps</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Workflow Automation</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Lifecycle Management</li>
+                      </ul>
                     </div>
-                    <!-- Features Item End -->
                   </div>
-                  <div class="col-lg-4">
-                    <!-- Features Item Start -->
-                    <div class="features-item">
-                      <div class="feat-icon-wrap">
-                        <div class="icon-img">
-                          <img src="assets/images/icon/feat-icon4.png" alt="" />
-                        </div>
-                        <div class="icon-right">
-                          <svg
-                            width="28"
-                            height="27"
-                            viewBox="0 0 28 27"
-                            fill="none"
-                          >
-                            <path
-                              d="M19.5817 16.5247C19.5646 16.6917 19.5813 16.8604 19.6309 17.0208C19.6804 17.1812 19.7618 17.3299 19.8701 17.4582C19.9784 17.5865 20.1114 17.6916 20.2612 17.7673C20.411 17.8431 20.5745 17.8879 20.742 17.899C20.9095 17.9102 21.0775 17.8875 21.2361 17.8323C21.3946 17.7772 21.5404 17.6906 21.6648 17.5779C21.7891 17.4651 21.8895 17.3285 21.9599 17.1761C22.0303 17.0237 22.0693 16.8587 22.0746 16.6909L22.7017 7.28369C22.713 7.11993 22.6918 6.95556 22.6393 6.80002C22.5869 6.64447 22.5043 6.50081 22.3962 6.37728C22.2881 6.25375 22.1567 6.15278 22.0095 6.08016C21.8623 6.00755 21.7022 5.96472 21.5384 5.95414L12.1311 5.32699C11.9641 5.30992 11.7954 5.32667 11.635 5.37622C11.4747 5.42577 11.3259 5.50713 11.1976 5.61542C11.0694 5.72371 10.9642 5.85673 10.8885 6.00654C10.8128 6.15634 10.768 6.31987 10.7568 6.48737C10.7457 6.65486 10.7683 6.82288 10.8235 6.98142C10.8787 7.13995 10.9652 7.28575 11.078 7.41011C11.1907 7.53447 11.3274 7.63485 11.4798 7.70526C11.6322 7.77566 11.7972 7.81465 11.9649 7.8199L18.3618 8.24636L6.20774 18.8812C5.95825 19.0995 5.80569 19.408 5.78364 19.7388C5.76159 20.0696 5.87184 20.3956 6.09015 20.6451C6.30846 20.8946 6.61693 21.0471 6.94772 21.0692C7.27851 21.0912 7.60451 20.981 7.854 20.7627L20.0081 10.1278L19.5817 16.5247Z"
-                            />
-                          </svg>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); height: 100%;">
+                      <div class="service-icon" style="margin-bottom: 20px;">
+                        <img src="assets/images/icon/feat-icon4.png" alt="Application Support" style="width: 60px; height: 60px;" />
                       </div>
-                      <div class="feat-content">
-                        <h3 class="title">
-                          <a href="contact.html">Application Support</a>
-                        </h3>
-                        <p>
-                          Ongoing maintenance for <br />
-                          optimal performance
-                        </p>
-                      </div>
+                      <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">Application Support</h3>
+                      <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Proactive monitoring, optimization, and release management for mission-critical workloads.
+                      </p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>24/7 Monitoring</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Release Management</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Incident Mitigation</li>
+                      </ul>
                     </div>
-                    <!-- Features Item End -->
                   </div>
-                  <div class="col-lg-4">
-                    <!-- Features Item Start -->
-                    <div class="features-item">
-                      <div class="feat-icon-wrap">
-                        <div class="icon-img">
-                          <img src="assets/images/icon/feat-icon8.png" alt="" />
-                        </div>
-                        <div class="icon-right">
-                          <svg
-                            width="28"
-                            height="27"
-                            viewBox="0 0 28 27"
-                            fill="none"
-                          >
-                            <path
-                              d="M19.5817 16.5247C19.5646 16.6917 19.5813 16.8604 19.6309 17.0208C19.6804 17.1812 19.7618 17.3299 19.8701 17.4582C19.9784 17.5865 20.1114 17.6916 20.2612 17.7673C20.411 17.8431 20.5745 17.8879 20.742 17.899C20.9095 17.9102 21.0775 17.8875 21.2361 17.8323C21.3946 17.7772 21.5404 17.6906 21.6648 17.5779C21.7891 17.4651 21.8895 17.3285 21.9599 17.1761C22.0303 17.0237 22.0693 16.8587 22.0746 16.6909L22.7017 7.28369C22.713 7.11993 22.6918 6.95556 22.6393 6.80002C22.5869 6.64447 22.5043 6.50081 22.3962 6.37728C22.2881 6.25375 22.1567 6.15278 22.0095 6.08016C21.8623 6.00755 21.7022 5.96472 21.5384 5.95414L12.1311 5.32699C11.9641 5.30992 11.7954 5.32667 11.635 5.37622C11.4747 5.42577 11.3259 5.50713 11.1976 5.61542C11.0694 5.72371 10.9642 5.85673 10.8885 6.00654C10.8128 6.15634 10.768 6.31987 10.7568 6.48737C10.7457 6.65486 10.7683 6.82288 10.8235 6.98142C10.8787 7.13995 10.9652 7.28575 11.078 7.41011C11.1907 7.53447 11.3274 7.63485 11.4798 7.70526C11.6322 7.77566 11.7972 7.81465 11.9649 7.8199L18.3618 8.24636L6.20774 18.8812C5.95825 19.0995 5.80569 19.408 5.78364 19.7388C5.76159 20.0696 5.87184 20.3956 6.09015 20.6451C6.30846 20.8946 6.61693 21.0471 6.94772 21.0692C7.27851 21.0912 7.60451 20.981 7.854 20.7627L20.0081 10.1278L19.5817 16.5247Z"
-                            />
-                          </svg>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); height: 100%;">
+                      <div class="service-icon" style="margin-bottom: 20px;">
+                        <img src="assets/images/icon/feat-icon8.png" alt="Integration Migration" style="width: 60px; height: 60px;" />
                       </div>
-                      <div class="feat-content">
-                        <h3 class="title">
-                          <a href="contact.html">Integration Migration</a>
-                        </h3>
-                        <p>
-                          Seamless migration to <br />
-                          SAP Integration Suite
-                        </p>
-                      </div>
+                      <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">Integration Migration</h3>
+                      <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Accelerators and governance to transition from PI/PO to SAP Integration Suite.
+                      </p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Landscape Assessment</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Cutover Orchestration</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Reusable Templates</li>
+                      </ul>
                     </div>
-                    <!-- Features Item End -->
                   </div>
-                  <div class="col-lg-4">
-                    <!-- Features Item Start -->
-                    <div class="features-item">
-                      <div class="feat-icon-wrap">
-                        <div class="icon-img">
-                          <img src="assets/images/icon/feat-icon1.png" alt="" />
-                        </div>
-                        <div class="icon-right">
-                          <svg
-                            width="28"
-                            height="27"
-                            viewBox="0 0 28 27"
-                            fill="none"
-                          >
-                            <path
-                              d="M19.5817 16.5247C19.5646 16.6917 19.5813 16.8604 19.6309 17.0208C19.6804 17.1812 19.7618 17.3299 19.8701 17.4582C19.9784 17.5865 20.1114 17.6916 20.2612 17.7673C20.411 17.8431 20.5745 17.8879 20.742 17.899C20.9095 17.9102 21.0775 17.8875 21.2361 17.8323C21.3946 17.7772 21.5404 17.6906 21.6648 17.5779C21.7891 17.4651 21.8895 17.3285 21.9599 17.1761C22.0303 17.0237 22.0693 16.8587 22.0746 16.6909L22.7017 7.28369C22.713 7.11993 22.6918 6.95556 22.6393 6.80002C22.5869 6.64447 22.5043 6.50081 22.3962 6.37728C22.2881 6.25375 22.1567 6.15278 22.0095 6.08016C21.8623 6.00755 21.7022 5.96472 21.5384 5.95414L12.1311 5.32699C11.9641 5.30992 11.7954 5.32667 11.635 5.37622C11.4747 5.42577 11.3259 5.50713 11.1976 5.61542C11.0694 5.72371 10.9642 5.85673 10.8885 6.00654C10.8128 6.15634 10.768 6.31987 10.7568 6.48737C10.7457 6.65486 10.7683 6.82288 10.8235 6.98142C10.8787 7.13995 10.9652 7.28575 11.078 7.41011C11.1907 7.53447 11.3274 7.63485 11.4798 7.70526C11.6322 7.77566 11.7972 7.81465 11.9649 7.8199L18.3618 8.24636L6.20774 18.8812C5.95825 19.0995 5.80569 19.408 5.78364 19.7388C5.76159 20.0696 5.87184 20.3956 6.09015 20.6451C6.30846 20.8946 6.61693 21.0471 6.94772 21.0692C7.27851 21.0912 7.60451 20.981 7.854 20.7627L20.0081 10.1278L19.5817 16.5247Z"
-                            />
-                          </svg>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.08); height: 100%;">
+                      <div class="service-icon" style="margin-bottom: 20px;">
+                        <img src="assets/images/icon/feat-icon1.png" alt="SAP BTP Platform" style="width: 60px; height: 60px;" />
                       </div>
-                      <div class="feat-content">
-                        <h3 class="title">
-                          <a href="contact.html">SAP BTP Platform</a>
-                        </h3>
-                        <p>
-                          Complete coverage of <br />
-                          all BTP pillars
-                        </p>
-                      </div>
+                      <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1a1a2e;">SAP BTP Platform</h3>
+                      <p style="color: #666; line-height: 1.7; margin-bottom: 20px;">
+                        Holistic platform management across security, compliance, and FinOps disciplines.
+                      </p>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Security &amp; Compliance</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Cost Optimization</li>
+                        <li style="padding: 5px 0; color: #555;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i>Observability</li>
+                      </ul>
                     </div>
-                    <!-- Features Item End -->
                   </div>
                 </div>
               </div>
@@ -751,7 +655,7 @@
                 <div class="footer-widget">
                   <h4 class="footer-widget-title">Global Presence</h4>
                   <div class="widget-link">
-                    <ul class="link">
+                    <ul class="link" id="footer-locations">
                       <li>Bangalore (APAC)</li>
                       <li>Dallas (Americas)</li>
                       <li>Dubai (EMEA)</li>
