@@ -1,584 +1,860 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Solutions - BTP C4E | SAP BTP Center for Enablement</title>
     <meta name="robots" content="index, follow" />
-    <meta name="description" content="Migration accelerators and pre-built iflows for SAP Integration Suite. Seamless migration from PI/PO, Mulesoft, TIBCO, Boomi, and IBM.">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="description"
+      content="Migration accelerators and pre-built iflows for SAP Integration Suite. Seamless migration from PI/PO, Mulesoft, TIBCO, Boomi, and IBM."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.png"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/all.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/flaticon.css">
-    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/aos.css">
-    <link rel="stylesheet" href="assets/css/plugins/animate.css">
-    <link rel="stylesheet" href="assets/css/plugins/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/plugins/splitting.css">
-    <link rel="stylesheet" href="assets/css/plugins/odometer-theme-default.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/plugins/all.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/aos.css" />
+    <link rel="stylesheet" href="assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="assets/css/plugins/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/plugins/splitting.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/plugins/odometer-theme-default.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-        .nav-pills .nav-link {
-            background-color: #f5f7fa;
-            color: #333;
-            border-radius: 25px;
-            padding: 12px 24px;
-            margin: 5px;
-            font-weight: 500;
-            border: 1px solid #e0e0e0;
-        }
-        .nav-pills .nav-link.active {
-            background-color: #1a73e8;
-            color: #fff;
-            border-color: #1a73e8;
-        }
-        .nav-pills .nav-link:hover {
-            background-color: #e8f0fe;
-        }
-        .solutions-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        .solutions-card-title {
-            font-size: 22px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 25px;
-        }
-        .solutions-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .solutions-list li {
-            display: flex;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 16px;
-            color: #333;
-        }
-        .solutions-list li:last-child {
-            border-bottom: none;
-        }
-        .check-icon {
-            color: #34a853;
-            margin-right: 15px;
-            font-size: 20px;
-        }
-        .solutions-accordion .accordion-item {
-            border: none;
-            border-bottom: 1px solid #f0f0f0;
-            background: transparent;
-        }
-        .solutions-accordion .accordion-item:last-child {
-            border-bottom: none;
-        }
-        .solutions-accordion .accordion-button {
-            background: transparent;
-            padding: 18px 0;
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
-            box-shadow: none;
-        }
-        .solutions-accordion .accordion-button:not(.collapsed) {
-            background: transparent;
-            color: #1a73e8;
-        }
-        .solutions-accordion .accordion-button::after {
-            background-size: 14px;
-        }
-        .solutions-accordion .accordion-body {
-            padding: 0 0 18px 35px;
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        .solutions-accordion .accordion-button .check-icon {
-            flex-shrink: 0;
-        }
+      .nav-pills .nav-link {
+        background-color: #f5f7fa;
+        color: #333;
+        border-radius: 25px;
+        padding: 12px 24px;
+        margin: 5px;
+        font-weight: 500;
+        border: 1px solid #e0e0e0;
+      }
+      .nav-pills .nav-link.active {
+        background-color: #1a73e8;
+        color: #fff;
+        border-color: #1a73e8;
+      }
+      .nav-pills .nav-link:hover {
+        background-color: #e8f0fe;
+      }
+      .solutions-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      .solutions-card-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 25px;
+      }
+      .solutions-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .solutions-list li {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 16px;
+        color: #333;
+      }
+      .solutions-list li:last-child {
+        border-bottom: none;
+      }
+      .check-icon {
+        color: #34a853;
+        margin-right: 15px;
+        font-size: 20px;
+      }
+      .solutions-accordion .accordion-item {
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        background: transparent;
+      }
+      .solutions-accordion .accordion-item:last-child {
+        border-bottom: none;
+      }
+      .solutions-accordion .accordion-button {
+        background: transparent;
+        padding: 18px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        box-shadow: none;
+      }
+      .solutions-accordion .accordion-button:not(.collapsed) {
+        background: transparent;
+        color: #1a73e8;
+      }
+      .solutions-accordion .accordion-button::after {
+        background-size: 14px;
+      }
+      .solutions-accordion .accordion-body {
+        padding: 0 0 18px 35px;
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .solutions-accordion .accordion-button .check-icon {
+        flex-shrink: 0;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <div class="main-wrapper">
-
-
-        <!-- preloader start -->
-        <div id="loading">
-            <div id="loading-center">
-                <div id="loading-center-absolute">
-                    <div class="object" id="object_four"></div>
-                    <div class="object" id="object_three"></div>
-                    <div class="object" id="object_two"></div>
-                    <div class="object" id="object_one"></div>
-                </div>
-            </div>
+      <!-- preloader start -->
+      <div id="loading">
+        <div id="loading-center">
+          <div id="loading-center-absolute">
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_one"></div>
+          </div>
         </div>
-        <!-- preloader end -->
+      </div>
+      <!-- preloader end -->
 
+      <!-- Header Start  -->
+      <div id="header" class="section header-section">
+        <div class="header-bottom-section">
+          <div class="container">
+            <!-- Header Wrap Start  -->
+            <div class="header-wrap">
+              <div class="header-logo">
+                <a href="index.html"
+                  ><img src="assets/images/logo-new.png" alt=""
+                /></a>
+              </div>
 
-        <!-- Header Start  -->
-        <div id="header" class="section header-section">
-            <div class="header-bottom-section">
-                <div class="container">
-
-                    <!-- Header Wrap Start  -->
-                    <div class="header-wrap">
-
-                        <div class="header-logo">
-                            <a href="index.html"><img src="assets/images/logo-new.png" alt=""></a>
-                        </div>
-
-                        <div class="header-menu d-none d-lg-block">
-                            <div class="main-menu">
-                                <nav id="mobile-menu">
-
-                                    <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li class="active-menu"><a href="solutions.html">Solutions</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-
-                        <!-- Header Meta Start -->
-                        <div class="header-meta">
-
-                            <div class="header-btn-wrap d-none d-lg-block">
-                                <a class="btn" href="contact.html">Get Started</a>
-                            </div>
-
-                            <!-- Header Toggle Start -->
-                            <div class="side-menu-icon d-lg-none">
-                                <a href="javascript:void(0)" class="info-toggle-btn f-right sidebar-toggle-btn">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </a>
-                            </div>
-                            <!-- Header Toggle End -->
-
-                        </div>
-                        <!-- Header Meta End  -->
-
-                    </div>
-                    <!-- Header Wrap End  -->
-
+              <div class="header-menu d-none d-lg-block">
+                <div class="main-menu">
+                  <nav id="mobile-menu">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="service.html">Services</a></li>
+                      <li class="active-menu">
+                        <a href="solutions.html">Solutions</a>
+                      </li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
                 </div>
+              </div>
+
+              <!-- Header Meta Start -->
+              <div class="header-meta">
+                <div class="header-btn-wrap d-none d-lg-block">
+                  <a class="btn" href="contact.html">Get Started</a>
+                </div>
+
+                <!-- Header Toggle Start -->
+                <div class="side-menu-icon d-lg-none">
+                  <a
+                    href="javascript:void(0)"
+                    class="info-toggle-btn f-right sidebar-toggle-btn"
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </a>
+                </div>
+                <!-- Header Toggle End -->
+              </div>
+              <!-- Header Meta End  -->
             </div>
+            <!-- Header Wrap End  -->
+          </div>
         </div>
-        <!-- Header End -->
+      </div>
+      <!-- Header End -->
 
-
-        <!-- sidebar area start -->
-        <div class="sidebar__area">
-            <div class="sidebar__wrapper">
-                <div class="sidebar__close">
-                    <button class="sidebar__close-btn" id="sidebar__close-btn">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="sidebar__content">
-                    <div class="sidebar__logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo-new.png" alt="logo">
-                        </a>
-                    </div>
-                    <div class="mobile-menu fix"></div>
-                    <div class="sidebar__text d-none d-lg-block">
-                        <p>Driving digital transformation through innovative SAP Business Technology Platform solutions. Comprehensive services from consulting to implementation.</p>
-                    </div>
-                    <div class="sidebar__contact">
-                        <h4>Contact Info</h4>
-                        <ul>
-                            <li class="d-flex align-items-center">
-                                <div class="sidebar__contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="sidebar__contact-text">
-                                    <a target="_blank" href="#">Global Presence: Bangalore, Dallas, Dubai, Germany, Sydney</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="sidebar__contact-icon mr-15">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="sidebar__contact-text">
-                                    <a href="mailto:info@btpc4e.com">info@btpc4e.com</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="sidebar__social">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- sidebar area start -->
+      <div class="sidebar__area">
+        <div class="sidebar__wrapper">
+          <div class="sidebar__close">
+            <button class="sidebar__close-btn" id="sidebar__close-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="sidebar__content">
+            <div class="sidebar__logo">
+              <a href="index.html">
+                <img src="assets/images/logo-new.png" alt="logo" />
+              </a>
             </div>
+            <div class="mobile-menu fix"></div>
+            <div class="sidebar__text d-none d-lg-block">
+              <p>
+                Driving digital transformation through innovative SAP Business
+                Technology Platform solutions. Comprehensive services from
+                consulting to implementation.
+              </p>
+            </div>
+            <div class="sidebar__contact">
+              <h4>Contact Info</h4>
+              <ul>
+                <li class="d-flex align-items-center">
+                  <div class="sidebar__contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="sidebar__contact-text">
+                    <a target="_blank" href="#"
+                      >Global Presence: Bangalore, Dallas</a
+                    >
+                  </div>
+                </li>
+                <li class="d-flex align-items-center">
+                  <div class="sidebar__contact-icon mr-15">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="sidebar__contact-text">
+                    <a href="mailto:info@btpc4e.com">info@btpc4e.com</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="sidebar__social">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- sidebar area end -->
+      </div>
+      <!-- sidebar area end -->
 
-        <div class="body-overlay"></div>
+      <div class="body-overlay"></div>
 
-
-        <!-- Page Banner Start -->
-        <div class="section page-banner-section" style="background-image: url(assets/images/bg/banner-bg.png);">
-            <div class="shape-1">
-                <img src="assets/images/shape/ban-sh1.png" alt="">
-            </div>
-            <div class="shape-2">
-                <img src="assets/images/shape/ban-sh2.png" alt="">
-            </div>
-            <div class="container">
-                <div class="page-banner-wrap">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12">
-                            <!-- Page Banner Content Start -->
-                            <div class="page-banner text-center">
-                                <h2 class="title">Solutions We Deliver</h2>
-                                <ul class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Solutions</li>
-                                </ul>
-                            </div>
-                            <!-- Page Banner Content End -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Page Banner Start -->
+      <div
+        class="section page-banner-section"
+        style="background-image: url(assets/images/bg/banner-bg.png)"
+      >
+        <div class="shape-1">
+          <img src="assets/images/shape/ban-sh1.png" alt="" />
         </div>
-        <!-- Page Banner End -->
-
-
-        <!-- Solutions Section Start -->
-        <div class="section section-padding">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title-wrap text-center">
-                            <div class="section-title2" data-splitting>
-                                <h2 class="title">Solutions We Deliver</h2>
-                            </div>
-                            <p data-aos-delay="600" data-aos="fade-up">Specialized migration and integration expertise</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab Navigation -->
-                <div class="row justify-content-center" data-aos-delay="700" data-aos="fade-up">
-                    <div class="col-lg-10">
-                        <ul class="nav nav-pills justify-content-center mb-5" id="solutionsTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="migration-tab" data-bs-toggle="pill" data-bs-target="#migration" type="button" role="tab" aria-controls="migration" aria-selected="true">Migration Accelerators</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="iflows-tab" data-bs-toggle="pill" data-bs-target="#iflows" type="button" role="tab" aria-controls="iflows" aria-selected="false">Pre-built iflows for other Application integrations</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Tab Content -->
-                <div class="tab-content" id="solutionsTabContent">
-                    <!-- Migration Accelerators Tab -->
-                    <div class="tab-pane fade show active" id="migration" role="tabpanel" aria-labelledby="migration-tab">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="solutions-card" data-aos-delay="800" data-aos="fade-up">
-                                    <h4 class="solutions-card-title">Migration Accelerators</h4>
-                                    <div class="accordion solutions-accordion" id="migrationAccordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="migHeadOne">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#migCollapseOne" aria-expanded="false" aria-controls="migCollapseOne">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    PI/PO to Integration Suite
-                                                </button>
-                                            </h2>
-                                            <div id="migCollapseOne" class="accordion-collapse collapse" aria-labelledby="migHeadOne" data-bs-parent="#migrationAccordion">
-                                                <div class="accordion-body">
-                                                    Seamlessly migrate your SAP Process Integration and Process Orchestration landscapes to SAP Integration Suite with automated assessment, mapping conversion, and testing tools.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="migHeadTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#migCollapseTwo" aria-expanded="false" aria-controls="migCollapseTwo">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Mulesoft to Integration Suite
-                                                </button>
-                                            </h2>
-                                            <div id="migCollapseTwo" class="accordion-collapse collapse" aria-labelledby="migHeadTwo" data-bs-parent="#migrationAccordion">
-                                                <div class="accordion-body">
-                                                    Accelerate your transition from Mulesoft to SAP Integration Suite with pre-built converters, API management migration tools, and comprehensive testing frameworks.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="migHeadThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#migCollapseThree" aria-expanded="false" aria-controls="migCollapseThree">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    TIBCO to Integration Suite
-                                                </button>
-                                            </h2>
-                                            <div id="migCollapseThree" class="accordion-collapse collapse" aria-labelledby="migHeadThree" data-bs-parent="#migrationAccordion">
-                                                <div class="accordion-body">
-                                                    Transform your TIBCO integration landscapes to SAP Integration Suite with specialized migration accelerators for BusinessWorks and messaging components.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="migHeadFour">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#migCollapseFour" aria-expanded="false" aria-controls="migCollapseFour">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Boomi to Integration Suite
-                                                </button>
-                                            </h2>
-                                            <div id="migCollapseFour" class="accordion-collapse collapse" aria-labelledby="migHeadFour" data-bs-parent="#migrationAccordion">
-                                                <div class="accordion-body">
-                                                    Migrate Dell Boomi integrations to SAP Integration Suite with automated process conversion, connector mapping, and data flow transformation tools.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="migHeadFive">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#migCollapseFive" aria-expanded="false" aria-controls="migCollapseFive">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    IBM to Integration Suite
-                                                </button>
-                                            </h2>
-                                            <div id="migCollapseFive" class="accordion-collapse collapse" aria-labelledby="migHeadFive" data-bs-parent="#migrationAccordion">
-                                                <div class="accordion-body">
-                                                    Transition from IBM WebSphere and App Connect to SAP Integration Suite with enterprise-grade migration tools designed for complex IBM middleware landscapes.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pre-built iflows Tab -->
-                    <div class="tab-pane fade" id="iflows" role="tabpanel" aria-labelledby="iflows-tab">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="solutions-card" data-aos-delay="800" data-aos="fade-up">
-                                    <h4 class="solutions-card-title">Pre-built iflows to integrate with the following applications</h4>
-                                    <div class="accordion solutions-accordion" id="iflowsAccordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="iflowHeadOne">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#iflowCollapseOne" aria-expanded="false" aria-controls="iflowCollapseOne">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Kinaxis
-                                                </button>
-                                            </h2>
-                                            <div id="iflowCollapseOne" class="accordion-collapse collapse" aria-labelledby="iflowHeadOne" data-bs-parent="#iflowsAccordion">
-                                                <div class="accordion-body">
-                                                    Ready-to-deploy integration flows for Kinaxis RapidResponse supply chain planning platform. Connect demand planning, supply planning, and S&OP processes with SAP systems.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="iflowHeadTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#iflowCollapseTwo" aria-expanded="false" aria-controls="iflowCollapseTwo">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Blue Yonder
-                                                </button>
-                                            </h2>
-                                            <div id="iflowCollapseTwo" class="accordion-collapse collapse" aria-labelledby="iflowHeadTwo" data-bs-parent="#iflowsAccordion">
-                                                <div class="accordion-body">
-                                                    Pre-built integrations for Blue Yonder (formerly JDA) warehouse management, transportation, and fulfillment solutions. Streamline logistics operations with SAP connectivity.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="iflowHeadThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#iflowCollapseThree" aria-expanded="false" aria-controls="iflowCollapseThree">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Korber
-                                                </button>
-                                            </h2>
-                                            <div id="iflowCollapseThree" class="accordion-collapse collapse" aria-labelledby="iflowHeadThree" data-bs-parent="#iflowsAccordion">
-                                                <div class="accordion-body">
-                                                    Integration templates for Korber Supply Chain solutions including warehouse management and voice-directed workflows. Enable seamless data exchange with SAP ERP and S/4HANA.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="iflowHeadFour">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#iflowCollapseFour" aria-expanded="false" aria-controls="iflowCollapseFour">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Softeon
-                                                </button>
-                                            </h2>
-                                            <div id="iflowCollapseFour" class="accordion-collapse collapse" aria-labelledby="iflowHeadFour" data-bs-parent="#iflowsAccordion">
-                                                <div class="accordion-body">
-                                                    Pre-configured iflows for Softeon WMS integration covering inventory management, order fulfillment, and warehouse operations with real-time SAP synchronization.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="iflowHeadFive">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#iflowCollapseFive" aria-expanded="false" aria-controls="iflowCollapseFive">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Zycus
-                                                </button>
-                                            </h2>
-                                            <div id="iflowCollapseFive" class="accordion-collapse collapse" aria-labelledby="iflowHeadFive" data-bs-parent="#iflowsAccordion">
-                                                <div class="accordion-body">
-                                                    Integration flows for Zycus procurement suite including source-to-pay, supplier management, and contract lifecycle management connected to SAP procurement modules.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="iflowHeadSix">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#iflowCollapseSix" aria-expanded="false" aria-controls="iflowCollapseSix">
-                                                    <span class="check-icon"><i class="fas fa-check-circle"></i></span>
-                                                    Relex
-                                                </button>
-                                            </h2>
-                                            <div id="iflowCollapseSix" class="accordion-collapse collapse" aria-labelledby="iflowHeadSix" data-bs-parent="#iflowsAccordion">
-                                                <div class="accordion-body">
-                                                    Ready-made integrations for RELEX Solutions retail and supply chain planning. Connect demand forecasting, replenishment, and space planning with SAP retail systems.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Section -->
-                <div class="row justify-content-center mt-5" data-aos-delay="900" data-aos="fade-up">
-                    <div class="col-lg-6 text-center">
-                        <a class="btn" href="contact.html">Get Started with Our Solutions</a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="shape-2">
+          <img src="assets/images/shape/ban-sh2.png" alt="" />
         </div>
-        <!-- Solutions Section End -->
-
-
-        <!-- Footer Section Start -->
-        <div class="section footer-section">
-
-            <div class="container">
-                <!-- Footer Widget Wrap Start -->
-                <div class="footer-widget-wrap">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Footer Widget Start -->
-                            <div class="footer-widget-about">
-                                <a class="footer-logo" href="index.html"><img src="assets/images/logo-new.png" alt="Logo"></a>
-                                <p>Driving digital transformation through innovative SAP solutions.</p>
-                                <div class="footer-social">
-                                    <ul class="social">
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Footer Widget End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Footer Widget Start -->
-                            <div class="footer-widget footer-widget-2">
-                                <h4 class="footer-widget-title">Quick Links</h4>
-
-                                <div class="widget-link">
-                                    <ul class="link">
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="solutions.html">Solutions</a></li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Footer Widget End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Footer Widget Start -->
-                            <div class="footer-widget footer-widget-3">
-                                <h4 class="footer-widget-title">Contact</h4>
-
-                                <div class="widget-link">
-                                    <ul class="link">
-                                        <li><a href="mailto:info@btpc4e.com">info@btpc4e.com</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Footer Widget End -->
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <!-- Footer Widget Start -->
-                            <div class="footer-widget">
-                                <h4 class="footer-widget-title">Global Presence</h4>
-                                <div class="widget-link">
-                                    <ul class="link">
-                                        <li>Bangalore (APAC)</li>
-                                        <li>Dallas (Americas)</li>
-                                        <li>Dubai (EMEA)</li>
-                                        <li>Germany (EMEA)</li>
-                                        <li>Sydney (APAC)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Footer Widget End -->
-                        </div>
-                    </div>
+        <div class="container">
+          <div class="page-banner-wrap">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Page Banner Content Start -->
+                <div class="page-banner text-center">
+                  <h2 class="title">Solutions We Deliver</h2>
+                  <ul class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Solutions
+                    </li>
+                  </ul>
                 </div>
-                <!-- Footer Widget Wrap End -->
+                <!-- Page Banner Content End -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page Banner End -->
+
+      <!-- Solutions Section Start -->
+      <div class="section section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title-wrap text-center">
+                <div class="section-title2" data-splitting>
+                  <h2 class="title">Solutions We Deliver</h2>
+                </div>
+                <p data-aos-delay="600" data-aos="fade-up">
+                  Specialized migration and integration expertise
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Navigation -->
+          <div
+            class="row justify-content-center"
+            data-aos-delay="700"
+            data-aos="fade-up"
+          >
+            <div class="col-lg-10">
+              <ul
+                class="nav nav-pills justify-content-center mb-5"
+                id="solutionsTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="migration-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#migration"
+                    type="button"
+                    role="tab"
+                    aria-controls="migration"
+                    aria-selected="true"
+                  >
+                    Migration Accelerators
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="iflows-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#iflows"
+                    type="button"
+                    role="tab"
+                    aria-controls="iflows"
+                    aria-selected="false"
+                  >
+                    Pre-built iflows for other Application integrations
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content" id="solutionsTabContent">
+            <!-- Migration Accelerators Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="migration"
+              role="tabpanel"
+              aria-labelledby="migration-tab"
+            >
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div
+                    class="solutions-card"
+                    data-aos-delay="800"
+                    data-aos="fade-up"
+                  >
+                    <h4 class="solutions-card-title">Migration Accelerators</h4>
+                    <div
+                      class="accordion solutions-accordion"
+                      id="migrationAccordion"
+                    >
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="migHeadOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#migCollapseOne"
+                            aria-expanded="false"
+                            aria-controls="migCollapseOne"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            PI/PO to Integration Suite
+                          </button>
+                        </h2>
+                        <div
+                          id="migCollapseOne"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="migHeadOne"
+                          data-bs-parent="#migrationAccordion"
+                        >
+                          <div class="accordion-body">
+                            Seamlessly migrate your SAP Process Integration and
+                            Process Orchestration landscapes to SAP Integration
+                            Suite with automated assessment, mapping conversion,
+                            and testing tools.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="migHeadTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#migCollapseTwo"
+                            aria-expanded="false"
+                            aria-controls="migCollapseTwo"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Mulesoft to Integration Suite
+                          </button>
+                        </h2>
+                        <div
+                          id="migCollapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="migHeadTwo"
+                          data-bs-parent="#migrationAccordion"
+                        >
+                          <div class="accordion-body">
+                            Accelerate your transition from Mulesoft to SAP
+                            Integration Suite with pre-built converters, API
+                            management migration tools, and comprehensive
+                            testing frameworks.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="migHeadThree">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#migCollapseThree"
+                            aria-expanded="false"
+                            aria-controls="migCollapseThree"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            TIBCO to Integration Suite
+                          </button>
+                        </h2>
+                        <div
+                          id="migCollapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="migHeadThree"
+                          data-bs-parent="#migrationAccordion"
+                        >
+                          <div class="accordion-body">
+                            Transform your TIBCO integration landscapes to SAP
+                            Integration Suite with specialized migration
+                            accelerators for BusinessWorks and messaging
+                            components.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="migHeadFour">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#migCollapseFour"
+                            aria-expanded="false"
+                            aria-controls="migCollapseFour"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Boomi to Integration Suite
+                          </button>
+                        </h2>
+                        <div
+                          id="migCollapseFour"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="migHeadFour"
+                          data-bs-parent="#migrationAccordion"
+                        >
+                          <div class="accordion-body">
+                            Migrate Dell Boomi integrations to SAP Integration
+                            Suite with automated process conversion, connector
+                            mapping, and data flow transformation tools.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="migHeadFive">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#migCollapseFive"
+                            aria-expanded="false"
+                            aria-controls="migCollapseFive"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            IBM to Integration Suite
+                          </button>
+                        </h2>
+                        <div
+                          id="migCollapseFive"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="migHeadFive"
+                          data-bs-parent="#migrationAccordion"
+                        >
+                          <div class="accordion-body">
+                            Transition from IBM WebSphere and App Connect to SAP
+                            Integration Suite with enterprise-grade migration
+                            tools designed for complex IBM middleware
+                            landscapes.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Footer Copyright Start -->
-            <div class="footer-copyright-area">
-                <div class="container">
-                    <div class="footer-copyright-wrap">
-                        <div class="row align-items-center">
-                            <div class="col-lg-12">
-                                <!-- Footer Copyright Text Start -->
-                                <div class="copyright-text text-center">
-                                    <p>© 2025 BTP C4E. All rights reserved.</p>
-                                </div>
-                                <!-- Footer Copyright Text End -->
-                            </div>
+            <!-- Pre-built iflows Tab -->
+            <div
+              class="tab-pane fade"
+              id="iflows"
+              role="tabpanel"
+              aria-labelledby="iflows-tab"
+            >
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div
+                    class="solutions-card"
+                    data-aos-delay="800"
+                    data-aos="fade-up"
+                  >
+                    <h4 class="solutions-card-title">
+                      Pre-built iflows to integrate with the following
+                      applications
+                    </h4>
+                    <div
+                      class="accordion solutions-accordion"
+                      id="iflowsAccordion"
+                    >
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="iflowHeadOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#iflowCollapseOne"
+                            aria-expanded="false"
+                            aria-controls="iflowCollapseOne"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Kinaxis
+                          </button>
+                        </h2>
+                        <div
+                          id="iflowCollapseOne"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="iflowHeadOne"
+                          data-bs-parent="#iflowsAccordion"
+                        >
+                          <div class="accordion-body">
+                            Ready-to-deploy integration flows for Kinaxis
+                            RapidResponse supply chain planning platform.
+                            Connect demand planning, supply planning, and S&OP
+                            processes with SAP systems.
+                          </div>
                         </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="iflowHeadTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#iflowCollapseTwo"
+                            aria-expanded="false"
+                            aria-controls="iflowCollapseTwo"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Blue Yonder
+                          </button>
+                        </h2>
+                        <div
+                          id="iflowCollapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="iflowHeadTwo"
+                          data-bs-parent="#iflowsAccordion"
+                        >
+                          <div class="accordion-body">
+                            Pre-built integrations for Blue Yonder (formerly
+                            JDA) warehouse management, transportation, and
+                            fulfillment solutions. Streamline logistics
+                            operations with SAP connectivity.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="iflowHeadThree">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#iflowCollapseThree"
+                            aria-expanded="false"
+                            aria-controls="iflowCollapseThree"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Korber
+                          </button>
+                        </h2>
+                        <div
+                          id="iflowCollapseThree"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="iflowHeadThree"
+                          data-bs-parent="#iflowsAccordion"
+                        >
+                          <div class="accordion-body">
+                            Integration templates for Korber Supply Chain
+                            solutions including warehouse management and
+                            voice-directed workflows. Enable seamless data
+                            exchange with SAP ERP and S/4HANA.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="iflowHeadFour">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#iflowCollapseFour"
+                            aria-expanded="false"
+                            aria-controls="iflowCollapseFour"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Softeon
+                          </button>
+                        </h2>
+                        <div
+                          id="iflowCollapseFour"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="iflowHeadFour"
+                          data-bs-parent="#iflowsAccordion"
+                        >
+                          <div class="accordion-body">
+                            Pre-configured iflows for Softeon WMS integration
+                            covering inventory management, order fulfillment,
+                            and warehouse operations with real-time SAP
+                            synchronization.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="iflowHeadFive">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#iflowCollapseFive"
+                            aria-expanded="false"
+                            aria-controls="iflowCollapseFive"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Zycus
+                          </button>
+                        </h2>
+                        <div
+                          id="iflowCollapseFive"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="iflowHeadFive"
+                          data-bs-parent="#iflowsAccordion"
+                        >
+                          <div class="accordion-body">
+                            Integration flows for Zycus procurement suite
+                            including source-to-pay, supplier management, and
+                            contract lifecycle management connected to SAP
+                            procurement modules.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="iflowHeadSix">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#iflowCollapseSix"
+                            aria-expanded="false"
+                            aria-controls="iflowCollapseSix"
+                          >
+                            <span class="check-icon"
+                              ><i class="fas fa-check-circle"></i
+                            ></span>
+                            Relex
+                          </button>
+                        </h2>
+                        <div
+                          id="iflowCollapseSix"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="iflowHeadSix"
+                          data-bs-parent="#iflowsAccordion"
+                        >
+                          <div class="accordion-body">
+                            Ready-made integrations for RELEX Solutions retail
+                            and supply chain planning. Connect demand
+                            forecasting, replenishment, and space planning with
+                            SAP retail systems.
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- Footer Copyright End -->
+          </div>
 
+          <!-- CTA Section -->
+          <div
+            class="row justify-content-center mt-5"
+            data-aos-delay="900"
+            data-aos="fade-up"
+          >
+            <div class="col-lg-6 text-center">
+              <a class="btn" href="contact.html"
+                >Get Started with Our Solutions</a
+              >
+            </div>
+          </div>
         </div>
-        <!-- Footer Section End -->
+      </div>
+      <!-- Solutions Section End -->
 
-        <!-- back to top start -->
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
+      <!-- Footer Section Start -->
+      <div class="section footer-section">
+        <div class="container">
+          <!-- Footer Widget Wrap Start -->
+          <div class="footer-widget-wrap">
+            <div class="row">
+              <div class="col-lg-3 col-sm-6">
+                <!-- Footer Widget Start -->
+                <div class="footer-widget-about">
+                  <a class="footer-logo" href="index.html"
+                    ><img src="assets/images/logo-new.png" alt="Logo"
+                  /></a>
+                  <p>
+                    Driving digital transformation through innovative SAP
+                    solutions.
+                  </p>
+                  <div class="footer-social">
+                    <ul class="social">
+                      <li>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Footer Widget End -->
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <!-- Footer Widget Start -->
+                <div class="footer-widget footer-widget-2">
+                  <h4 class="footer-widget-title">Quick Links</h4>
+
+                  <div class="widget-link">
+                    <ul class="link">
+                      <li><a href="service.html">Services</a></li>
+                      <li><a href="solutions.html">Solutions</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Footer Widget End -->
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <!-- Footer Widget Start -->
+                <div class="footer-widget footer-widget-3">
+                  <h4 class="footer-widget-title">Contact</h4>
+
+                  <div class="widget-link">
+                    <ul class="link">
+                      <li>
+                        <a href="mailto:info@btpc4e.com">info@btpc4e.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Footer Widget End -->
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <!-- Footer Widget Start -->
+                <div class="footer-widget">
+                  <h4 class="footer-widget-title">Global Presence</h4>
+                  <div class="widget-link">
+                    <ul class="link">
+                      <li>Bangalore (APAC)</li>
+                      <li>Dallas (Americas)</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Footer Widget End -->
+              </div>
+            </div>
+          </div>
+          <!-- Footer Widget Wrap End -->
         </div>
-        <!-- back to top end -->
 
+        <!-- Footer Copyright Start -->
+        <div class="footer-copyright-area">
+          <div class="container">
+            <div class="footer-copyright-wrap">
+              <div class="row align-items-center">
+                <div class="col-lg-12">
+                  <!-- Footer Copyright Text Start -->
+                  <div class="copyright-text text-center">
+                    <p>© 2025 BTP C4E. All rights reserved.</p>
+                  </div>
+                  <!-- Footer Copyright Text End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Copyright End -->
+      </div>
+      <!-- Footer Section End -->
+
+      <!-- back to top start -->
+      <div class="progress-wrap">
+        <svg
+          class="progress-circle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+      <!-- back to top end -->
     </div>
-
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery.min.js"></script>
@@ -601,6 +877,5 @@
     <script src="assets/js/contentful/client.js"></script>
     <script src="assets/js/contentful/renderer.js"></script>
     <script src="assets/js/contentful/pages/solutions.js"></script>
-
-</body>
+  </body>
 </html>
