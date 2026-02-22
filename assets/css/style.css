@@ -162,7 +162,7 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #f4257b;
+  color: #1880c8;
 }
 
 ul,
@@ -328,7 +328,7 @@ textarea:-ms-input-placeholder {
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   display: inline-block;
-  color: #f4257b;
+  color: #1880c8;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   position: relative;
@@ -456,7 +456,7 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #f4257b;
+  background-color: #1880c8;
 }
 .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
@@ -527,9 +527,9 @@ textarea:-ms-input-placeholder {
 #loading .object {
   border-radius: 50% 50% 50% 50%;
   position: absolute;
-  border-top: 5px solid #f4257b;
+  border-top: 5px solid #1880c8;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #f4257b;
+  border-left: 5px solid #1880c8;
   border-right: 5px solid transparent;
   animation: animate 2s infinite;
 }
@@ -577,7 +577,7 @@ input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not(
   ):focus,
 textarea:focus {
   outline: none;
-  border-color: #f4257b;
+  border-color: #1880c8;
 }
 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not(
     [type="file"]
@@ -636,7 +636,7 @@ textarea:-ms-input-placeholder {
   display: inline-block;
   overflow: hidden;
   transform: perspective(0) translateZ(0);
-  background: #f4257b;
+  background: #1880c8;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   border-color: transparent;
   color: #ffffff;
@@ -684,7 +684,7 @@ textarea:-ms-input-placeholder {
   line-height: 45px;
   font-size: 14px;
   padding: 0 40px;
-  background: #f4257b;
+  background: #1880c8;
   color: #ffffff;
 }
 
@@ -693,13 +693,13 @@ textarea:-ms-input-placeholder {
   line-height: 48px;
   font-size: 18px;
   padding: 0 45px;
-  background: #f4257b;
+  background: #1880c8;
   box-shadow: 11px 10px 38px 0 rgba(46, 63, 99, 0.15);
   color: #ffffff;
 }
 .btn-4:hover {
   background: #ffffff;
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .btn-round {
@@ -738,13 +738,13 @@ textarea:-ms-input-placeholder {
 }
 
 .btn-primary {
-  background-color: #f4257b;
-  border-color: #f4257b;
+  background-color: #1880c8;
+  border-color: #1880c8;
   color: #ffffff;
 }
 .btn-primary:hover {
-  background-color: #f4257b;
-  border-color: #f4257b;
+  background-color: #1880c8;
+  border-color: #1880c8;
 }
 
 .btn-secondary {
@@ -764,10 +764,10 @@ textarea:-ms-input-placeholder {
   box-shadow: 11px 10px 38px 0 rgba(46, 63, 99, 0.15);
 }
 .btn-white::after {
-  background: #f4257b;
+  background: #1880c8;
 }
 .btn-white::before {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 /*----------------------------------------*/
@@ -857,16 +857,16 @@ textarea:-ms-input-placeholder {
   transition: 0.3s;
 }
 .main-menu ul li.active-menu > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .main-menu ul li.active-menu > a::after {
-  color: #f4257b;
+  color: #1880c8;
 }
 .main-menu ul li:hover > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .main-menu ul li:hover > a::after {
-  color: #f4257b;
+  color: #1880c8;
 }
 .main-menu ul li:hover .sub-menu {
   visibility: visible;
@@ -885,7 +885,7 @@ textarea:-ms-input-placeholder {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.16);
   padding: 20px 0px 15px;
   transition: 0.3s;
-  border-top: 4px solid #f4257b;
+  border-top: 4px solid #1880c8;
 }
 .main-menu ul li .sub-menu li {
   margin: 0;
@@ -905,10 +905,10 @@ textarea:-ms-input-placeholder {
   text-transform: capitalize;
 }
 .main-menu ul li .sub-menu li.active > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .main-menu ul li .sub-menu li:hover > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .main-menu ul li .sub-menu li > .sub-menu {
   left: 120%;
@@ -935,7 +935,7 @@ textarea:-ms-input-placeholder {
   color: #001f3f;
 }
 .header-btn-wrap .sing-in:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-btn-wrap .btn {
   height: 45px;
@@ -973,7 +973,7 @@ textarea:-ms-input-placeholder {
   background: #1680fb;
 }
 .header-section-02 .header-btn-wrap .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 .header-section-03 .header-wrap {
@@ -1024,38 +1024,38 @@ textarea:-ms-input-placeholder {
   background: #1680fb;
 }
 .header-section-04 .header-btn-wrap .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 .header-section-05 {
   top: 0;
 }
 .header-section-05 .main-menu ul li.active-menu > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .main-menu ul li.active-menu > a::after {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .main-menu ul li:hover > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .main-menu ul li:hover > a::after {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .main-menu ul li .sub-menu {
-  border-top: 4px solid #f4257b;
+  border-top: 4px solid #1880c8;
 }
 .header-section-05 .main-menu ul li .sub-menu li.active > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .main-menu ul li .sub-menu li:hover > a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .header-btn-wrap .sing-in:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .header-section-05 .header-btn-wrap .btn {
-  background: #f4257b;
+  background: #1880c8;
 }
 .header-section-05 .header-btn-wrap .btn:hover {
   background: #7f3de1;
@@ -1116,7 +1116,7 @@ textarea:-ms-input-placeholder {
   font-weight: 700;
 }
 .mean-container .mean-nav ul li a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .mean-container .mean-nav ul li a.mean-expand {
@@ -1134,7 +1134,7 @@ textarea:-ms-input-placeholder {
 }
 .mean-container .mean-nav ul li a.mean-expand:hover {
   background: var(--tp-theme-1);
-  color: #f4257b;
+  color: #1880c8;
   border-color: #ebebeb;
 }
 
@@ -1225,7 +1225,7 @@ textarea:-ms-input-placeholder {
   border-radius: 50%;
 }
 .sidebar__close-btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 .sidebar__logo {
   padding-bottom: 20px;
@@ -1270,7 +1270,7 @@ textarea:-ms-input-placeholder {
   input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not(
     [type="file"]
   ):focus {
-  border-color: #f4257b;
+  border-color: #1880c8;
 }
 .sidebar__search button {
   position: absolute;
@@ -1285,7 +1285,7 @@ textarea:-ms-input-placeholder {
   transition: 0.3s;
 }
 .sidebar__search button:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sidebar__text p {
   margin-bottom: 25px;
@@ -1304,12 +1304,12 @@ textarea:-ms-input-placeholder {
   margin-bottom: 20px;
 }
 .sidebar__contact ul li:hover i {
-  background: #f4257b;
+  background: #1880c8;
   color: #ffffff;
   border-color: #ebebeb;
 }
 .sidebar__contact ul li:hover a {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sidebar__contact-icon {
   margin-right: 15px;
@@ -1357,7 +1357,7 @@ textarea:-ms-input-placeholder {
   border-radius: 5px;
 }
 .sidebar__social ul li a:hover {
-  background: #f4257b;
+  background: #1880c8;
   color: #ffffff;
 }
 
@@ -1369,7 +1369,7 @@ textarea:-ms-input-placeholder {
   width: 52px;
   height: 52px;
   line-height: 60px;
-  background: #f4257b;
+  background: #1880c8;
   text-align: center;
   border-radius: 50%;
 }
@@ -1471,7 +1471,7 @@ textarea:-ms-input-placeholder {
 }
 .sasmix-hero-section .hero-content .hero-btn .btn:hover {
   background: #ffffff;
-  color: #f4257b;
+  color: #1880c8;
 }
 .sasmix-hero-section .hero-images {
   padding-top: 160px;
@@ -2028,7 +2028,7 @@ textarea:-ms-input-placeholder {
 }
 .sasmix-hero-section-04 .hero-content .hero-btn .btn:hover {
   background: #ffffff;
-  color: #f4257b;
+  color: #1880c8;
 }
 .sasmix-hero-section-04 .hero-img-wrap {
   position: relative;
@@ -2543,7 +2543,7 @@ textarea:-ms-input-placeholder {
   margin-top: 30px;
 }
 .sasmix-hero-section-06 .sasmix-hero-wrap .hero-content .hero-btn .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
   color: #ffffff;
 }
 .sasmix-hero-section-06 .sasmix-hero-wrap .hero-img-wrap {
@@ -3015,7 +3015,7 @@ textarea:-ms-input-placeholder {
   height: 50px;
   line-height: 46px;
   text-align: center;
-  background: #f4257b;
+  background: #1880c8;
   border-radius: 10px;
 }
 .features-item .feat-icon-wrap .icon-right {
@@ -3223,7 +3223,7 @@ textarea:-ms-input-placeholder {
   line-height: 46px;
   text-align: center;
   margin: 0 auto;
-  background: #f4257b;
+  background: #1880c8;
   border-radius: 10px;
 }
 .features-item-03 .feat-content .title {
@@ -3244,7 +3244,7 @@ textarea:-ms-input-placeholder {
   line-height: 30px;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  color: #f4257b;
+  color: #1880c8;
   margin-top: 10px;
 }
 .features-item-03 .feat-content .download-link i {
@@ -3282,7 +3282,7 @@ textarea:-ms-input-placeholder {
   height: 50px;
   line-height: 46px;
   text-align: center;
-  background: #f4257b;
+  background: #1880c8;
   border-radius: 10px;
 }
 .features-item-04 .feat-content .title {
@@ -3299,7 +3299,7 @@ textarea:-ms-input-placeholder {
   margin-top: 10px;
 }
 .features-item-04:hover {
-  border: 1px solid #f4257b;
+  border: 1px solid #1880c8;
 }
 
 @media only screen and (max-width: 991px) {
@@ -3421,13 +3421,13 @@ textarea:-ms-input-placeholder {
   line-height: 140px;
   text-align: center;
   font-size: 30px;
-  background: #f4257b;
+  background: #1880c8;
   color: #ffffff;
   border-radius: 50%;
 }
 .video-section .video-content .video a:hover {
   background: #ffffff;
-  color: #f4257b;
+  color: #1880c8;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -3536,7 +3536,7 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .single-counter .icon svg {
-  stroke: #f4257b;
+  stroke: #1880c8;
   stroke-width: 2px;
   stroke-linecap: round;
 }
@@ -3592,7 +3592,7 @@ textarea:-ms-input-placeholder {
   line-height: 30px;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  color: #f4257b;
+  color: #1880c8;
   margin-top: 30px;
 }
 .counter-section-02 .counter-left .download-link i {
@@ -3698,7 +3698,7 @@ textarea:-ms-input-placeholder {
   line-height: 30px;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  color: #f4257b;
+  color: #1880c8;
   margin-top: 20px;
 }
 .counter-section-03 .counter-title-wrap .download-link i {
@@ -3717,7 +3717,7 @@ textarea:-ms-input-placeholder {
   color: #1680fb;
 }
 .counter-section-04 .counter-title-wrap .download-link:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .counter-section-04 .single-counter .icon svg {
   stroke: #1680fb;
@@ -3753,7 +3753,7 @@ textarea:-ms-input-placeholder {
   }
 }
 .counter-section-05 .single-counter .icon svg {
-  stroke: #f4257b;
+  stroke: #1880c8;
 }
 
 .counter-section-06 {
@@ -3843,10 +3843,10 @@ textarea:-ms-input-placeholder {
   text-align: center;
   border-radius: 10px;
   background: #fff2f8;
-  border: 1px solid #f4257b;
+  border: 1px solid #1880c8;
 }
 .sasmix-overview-section .overview-list-item .icon svg {
-  stroke: #f4257b;
+  stroke: #1880c8;
   stroke-width: 2px;
   stroke-linecap: round;
 }
@@ -3901,7 +3901,7 @@ textarea:-ms-input-placeholder {
   border: 0;
 }
 .sasmix-overview-section-02 .overview-list-item .icon i {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sasmix-overview-section-02 .overview-list-item .content {
   flex: 1;
@@ -3955,7 +3955,7 @@ textarea:-ms-input-placeholder {
   margin-left: 3px;
 }
 .sasmix-overview-section-03 .overview-content .download-link:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sasmix-overview-section-04 .overview-image-wrap .image {
@@ -3986,7 +3986,7 @@ textarea:-ms-input-placeholder {
   margin-left: 3px;
 }
 .sasmix-overview-section-04 .overview-content .download-link:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sasmix-overview-section-05 {
@@ -4228,7 +4228,7 @@ textarea:-ms-input-placeholder {
   margin-top: 25px;
 }
 .sasmix-overview-section-09 .overview-content .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -4280,7 +4280,7 @@ textarea:-ms-input-placeholder {
 }
 
 .sasmix-overview-section-11 .overview-content .download-link {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sasmix-overview-section-11 .overview-content .download-link:hover {
   color: #7f3de1;
@@ -4405,7 +4405,7 @@ textarea:-ms-input-placeholder {
   line-height: 83px;
   text-align: center;
   border-radius: 50%;
-  background: #f4257b;
+  background: #1880c8;
   border: 0;
 }
 .service-item .icon svg {
@@ -4422,7 +4422,7 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .service-item:hover .content .title {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sasmix-service-section-02 .service-wrap-02 {
@@ -4450,7 +4450,7 @@ textarea:-ms-input-placeholder {
   color: #1680fb;
 }
 .sasmix-service-section-02 .service-bottom-text p a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .service-item-02 {
@@ -4508,7 +4508,7 @@ textarea:-ms-input-placeholder {
   border: 2px solid;
   border: double 2px transparent;
   background-image: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(to bottom, #f4257b, #7636de);
+    linear-gradient(to bottom, #1880c8, #2858b0);
   background-origin: border-box;
   background-clip: content-box, border-box;
   border-radius: 20px;
@@ -4583,7 +4583,7 @@ textarea:-ms-input-placeholder {
 }
 .single-pricing:hover {
   background-image: linear-gradient(#ffffff, #ffffff),
-    linear-gradient(to bottom, #7636de, #f4257b);
+    linear-gradient(to bottom, #2858b0, #1880c8);
   transform: translateY(-10px);
 }
 
@@ -4602,7 +4602,7 @@ textarea:-ms-input-placeholder {
   background: #1680fb;
 }
 .sasmix-pricing-section-02 .single-pricing .pricing-btn .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 .sasmix-pricing-section-03 .pricing-bg-wrap {
@@ -4628,7 +4628,7 @@ textarea:-ms-input-placeholder {
   background: #1680fb;
 }
 .sasmix-pricing-section-04 .single-pricing .pricing-btn .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 .pricing-grid {
@@ -4719,7 +4719,7 @@ textarea:-ms-input-placeholder {
 .testimonial-active
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #f4257b;
+  background-color: #1880c8;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4880,7 +4880,7 @@ textarea:-ms-input-placeholder {
   .testimonial-2-active
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #f4257b;
+  background-color: #1880c8;
 }
 
 .sasmix-testimonial-section-04 .testimonial-bg-wrap {
@@ -4947,7 +4947,7 @@ textarea:-ms-input-placeholder {
   .testimonial-active
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #f4257b;
+  background-color: #1880c8;
 }
 
 /*--
@@ -5026,7 +5026,7 @@ textarea:-ms-input-placeholder {
   box-shadow: none;
 }
 .faq-accordion .accordion-item .accordion-button:not(.collapsed) .title {
-  color: #f4257b;
+  color: #1880c8;
 }
 .faq-accordion .accordion-item .accordion-button:not(.collapsed)::after {
   position: absolute;
@@ -5075,7 +5075,7 @@ textarea:-ms-input-placeholder {
   margin-top: 30px;
 }
 .sasmix-faq-section-02 .faq-left .cta-wrap .cta-content .btn:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 .sasmix-faq-section-02
   .faq-accordion
@@ -5234,7 +5234,7 @@ textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 .sasmix-faq-section-03 .faq-bottom-text p a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 @media only screen and (max-width: 991px) {
@@ -5368,7 +5368,7 @@ textarea:-ms-input-placeholder {
   }
 }
 .single-blog .blog-content .blog-meta span i {
-  color: #f4257b;
+  color: #1880c8;
   margin-right: 5px;
 }
 .single-blog .blog-content .title {
@@ -5395,10 +5395,10 @@ textarea:-ms-input-placeholder {
   margin-left: -5px;
 }
 .single-blog .blog-btn .read-more span svg {
-  fill: #f4257b;
+  fill: #1880c8;
 }
 .single-blog .blog-btn .read-more:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .single-blog:hover .blog-image a img {
   transform: scale(1.1);
@@ -5474,7 +5474,7 @@ textarea:-ms-input-placeholder {
   margin-left: 20px;
 }
 .sasmix-event-schedule-tabs-menu .active .sasmix-event-schedule-day {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sasmix-event-schedule-time {
@@ -5631,7 +5631,7 @@ textarea:-ms-input-placeholder {
   text-align: center;
 }
 .single-team .team-img .team-social ul li a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .single-team .team-content {
   background: rgba(255, 255, 255, 0.5);
@@ -5653,7 +5653,7 @@ textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 .single-team .team-content .team-name-deg .name a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .single-team .team-content .team-name-deg .team-deg {
   font-size: 13px;
@@ -5684,7 +5684,7 @@ textarea:-ms-input-placeholder {
 .team-active
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #f4257b;
+  background-color: #1880c8;
 }
 
 .team-grid-wrap {
@@ -5896,7 +5896,7 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .sidebar-widget .search-form button:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sidebar-widget .widget-title {
@@ -5948,11 +5948,11 @@ textarea:-ms-input-placeholder {
   margin-top: 5px;
 }
 .sidebar-widget .recent-posts ul li .post-link .post-text .post-meta i {
-  color: #f4257b;
+  color: #1880c8;
   margin-right: 5px;
 }
 .sidebar-widget .recent-posts ul li .post-link:hover .post-text .title {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sidebar-widget .category .cate-item {
@@ -5972,7 +5972,7 @@ textarea:-ms-input-placeholder {
 .sidebar-widget .category .cate-item a i {
   font-size: 10px;
   line-height: 24px;
-  color: #f4257b;
+  color: #1880c8;
   margin-right: 5px;
 }
 .sidebar-widget .category .cate-item a .post-count {
@@ -5984,10 +5984,10 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .sidebar-widget .category .cate-item a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sidebar-widget .category .cate-item a:hover .post-count {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .sidebar-widget .sidebar-tag li {
@@ -6007,7 +6007,7 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .sidebar-widget .sidebar-tag li a:hover {
-  background-color: #f4257b;
+  background-color: #1880c8;
   color: #ffffff;
 }
 
@@ -6029,7 +6029,7 @@ textarea:-ms-input-placeholder {
   margin-right: 0;
 }
 .tp-pagination ul li.active a {
-  background: #f4257b;
+  background: #1880c8;
   border: 1px solid transparent;
 }
 .tp-pagination ul li a.page-numbers {
@@ -6065,7 +6065,7 @@ textarea:-ms-input-placeholder {
 .tp-pagination ul li a.current,
 .tp-pagination ul li span:hover,
 .tp-pagination ul li span.current {
-  background: #f4257b;
+  background: #1880c8;
   color: #ffffff;
   border: 1px solid transparent;
 }
@@ -6111,7 +6111,7 @@ textarea:-ms-input-placeholder {
   }
 }
 .blog-details-post .single-blog .blog-content .blog-meta span i {
-  color: #f4257b;
+  color: #1880c8;
   margin-right: 5px;
 }
 .blog-details-post .single-blog .blog-content .title {
@@ -6279,7 +6279,7 @@ textarea:-ms-input-placeholder {
   .sidebar-tag
   li
   a:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 .blog-details-post
   .blog-details-content
@@ -6326,7 +6326,7 @@ textarea:-ms-input-placeholder {
   .blog-details-share
   li
   a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .blog-details-post .blog-details-content .sasmix-post-pagination {
   display: flex;
@@ -6429,7 +6429,7 @@ textarea:-ms-input-placeholder {
   a
   i {
   font-size: 14px;
-  color: #f4257b;
+  color: #1880c8;
   padding: 0 10px;
 }
 .blog-details-post
@@ -6488,7 +6488,7 @@ textarea:-ms-input-placeholder {
   .post-content
   .date
   i {
-  color: #f4257b;
+  color: #1880c8;
   margin-right: 6px;
 }
 .blog-details-post .blog-details-content .comment-wrap .comment-box {
@@ -6622,7 +6622,7 @@ textarea:-ms-input-placeholder {
   .meta
   .date {
   margin-right: 30px;
-  color: #f4257b;
+  color: #1880c8;
 }
 .blog-details-post
   .blog-details-content
@@ -6749,7 +6749,7 @@ textarea:-ms-input-placeholder {
   .single-form
   .form-control:focus {
   outline: none;
-  border-color: #f4257b;
+  border-color: #1880c8;
 }
 .blog-details-post
   .blog-details-content
@@ -6818,10 +6818,10 @@ textarea:-ms-input-placeholder {
   font-size: 20px;
   border-radius: 10px;
   background: #fff2f8;
-  border: 1px solid #f4257b;
+  border: 1px solid #1880c8;
 }
 .contact-info-wrap .single-contact-info .info-icon i {
-  color: #f4257b;
+  color: #1880c8;
 }
 .contact-info-wrap .single-contact-info .info-content {
   margin-left: 20px;
@@ -6918,7 +6918,7 @@ textarea:-ms-input-placeholder {
     [type="file"]
   ):focus {
   outline: none;
-  border-color: #f4257b;
+  border-color: #1880c8;
 }
 .contact-form .contact-form-wrap .single-form textarea {
   height: 110px;
@@ -6968,7 +6968,7 @@ textarea:-ms-input-placeholder {
 .contact-form .contact-form-wrap .single-form textarea:focus {
   outline: none;
   box-shadow: none;
-  border-color: #f4257b;
+  border-color: #1880c8;
 }
 .contact-form .contact-form-wrap .form-btn .btn {
   height: 60px;
@@ -7045,7 +7045,7 @@ textarea:-ms-input-placeholder {
   color: #001f3f;
 }
 .sasmix-team-profile-section .profile-content .profile-social ul li a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sasmix-team-profile-section .profile-content .profile-social ul li + li {
   margin-left: 5px;
@@ -7088,14 +7088,14 @@ textarea:-ms-input-placeholder {
   font-size: 20px;
   border-radius: 10px;
   background: #fff2f8;
-  border: 1px solid #f4257b;
+  border: 1px solid #1880c8;
 }
 .sasmix-team-profile-section
   .team-profile-info
   .single-profile-info
   .info-icon
   i {
-  color: #f4257b;
+  color: #1880c8;
 }
 .sasmix-team-profile-section
   .team-profile-info
@@ -7276,7 +7276,7 @@ textarea:-ms-input-placeholder {
   .single-form
   .form-control:focus {
   outline: none;
-  border-color: #f4257b;
+  border-color: #1880c8;
 }
 .login-register-section
   .login-register-wrap
@@ -7442,7 +7442,7 @@ textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 .footer-social .social li a:hover {
-  background: #f4257b;
+  background: #1880c8;
 }
 
 .footer-widget .footer-widget-title {
@@ -7472,7 +7472,7 @@ textarea:-ms-input-placeholder {
   transition: all 0.3s linear;
 }
 .widget-link .link li a:hover {
-  color: #f4257b;
+  color: #1880c8;
 }
 
 .footer-section-02 .footer-widget-about p {
@@ -7553,7 +7553,7 @@ textarea:-ms-input-placeholder {
   text-align: center;
   line-height: 45px;
   font-size: 18px;
-  color: #f4257b;
+  color: #1880c8;
   left: 0;
   top: 0;
   height: 46px;
@@ -7567,7 +7567,7 @@ textarea:-ms-input-placeholder {
   fill: none;
 }
 .progress-wrap svg.progress-circle path {
-  stroke: #f4257b;
+  stroke: #1880c8;
   stroke-width: 4;
   box-sizing: border-box;
 }
