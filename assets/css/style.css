@@ -5299,6 +5299,13 @@ textarea:-ms-input-placeholder {
   line-height: 66px;
   color: #ffffff;
 }
+.sasmix-cta-section .cta-wrap .cta-content p {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 12px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.32);
+}
 @media only screen and (max-width: 991px) {
   .sasmix-cta-section .cta-wrap .cta-content .title {
     font-size: 44px;
