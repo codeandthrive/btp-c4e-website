@@ -55,26 +55,16 @@ const ContentRenderer = (function () {
    */
   async function renderLogo() {
     try {
-      const data = await ContentfulClient.getSiteSettings();
-      if (!data) return;
-
-      const { entry, includes } = data;
-      const logoUrl = ContentfulClient.resolveAssetUrl(entry, 'logo', includes);
-      const logoWhiteUrl = ContentfulClient.resolveAssetUrl(entry, 'logoWhite', includes);
-
-      if (logoUrl) {
-        document.querySelectorAll('.header-logo img, .sidebar__logo img').forEach(img => {
+      const logoUrl = 'assets/images/logonew.png';
+      document
+        .querySelectorAll('.header-logo img, .sidebar__logo img, .footer-logo img')
+        .forEach(img => {
           img.src = logoUrl;
-          img.alt = entry.fields.siteName || 'BTP C4E';
+          img.alt = 'BTP C4E logo';
+          img.classList.add('site-logo-img');
+          img.width = 104;
+          img.height = 117;
         });
-      }
-
-      if (logoWhiteUrl) {
-        document.querySelectorAll('.footer-logo img').forEach(img => {
-          img.src = logoWhiteUrl;
-          img.alt = entry.fields.siteName || 'BTP C4E';
-        });
-      }
     } catch (error) {
       console.error('Failed to render logo:', error);
     }

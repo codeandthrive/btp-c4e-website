@@ -820,6 +820,29 @@ textarea:-ms-input-placeholder {
   border-radius: 0;
 }
 
+.header-logo {
+  flex: 0 0 104px;
+  min-width: 104px;
+  width: 104px;
+}
+
+.header-logo a,
+.sidebar__logo a,
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.site-logo-img {
+  display: block;
+  width: 104px !important;
+  height: 117px !important;
+  min-width: 104px;
+  max-width: 104px !important;
+  object-fit: contain;
+}
+
 .main-menu ul li {
   display: inline-block;
   margin-right: 40px;
