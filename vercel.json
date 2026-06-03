@@ -1,9 +1,10 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
+      "src": "/",
       "has": [{ "type": "host", "value": "xelerator.btpc4e.com" }],
-      "destination": "/xelerator.html"
-    }
+      "dest": "/xelerator.html"
+    },
+    { "handle": "filesystem" }
   ]
 }
