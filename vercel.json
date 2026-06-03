@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "xelerator.btpc4e.com" }],
+      "destination": "/xelerator.html"
+    }
+  ]
+}

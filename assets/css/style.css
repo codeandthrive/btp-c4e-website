@@ -676,7 +676,8 @@ textarea:-ms-input-placeholder {
   background: #ffffff;
 }
 .btn-2:hover {
-  color: #7f3de1;
+  background: #6a2fc0;
+  color: #ffffff;
 }
 
 .btn-3 {
