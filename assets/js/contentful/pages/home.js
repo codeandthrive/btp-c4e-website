@@ -17,9 +17,9 @@
     const servicesContainer = document.querySelector('#services-container');
     if (servicesContainer) servicesContainer.innerHTML = '';
 
-    // Clear FAQ container
-    const faqContainer = document.querySelector('#faq-container');
-    if (faqContainer) faqContainer.innerHTML = '';
+    // FAQ container uses static content (Xelerator FAQs) — do not clear.
+    // const faqContainer = document.querySelector('#faq-container');
+    // if (faqContainer) faqContainer.innerHTML = '';
   }
 
   async function initHomePage() {
@@ -97,8 +97,8 @@
       // Load and render Services
       await ContentRenderer.renderServices('#services-container');
 
-      // Load and render FAQs (home page only)
-      await ContentRenderer.renderFaqs('#faq-container', true, 'homePageFaq');
+      // FAQs use static content (Xelerator FAQs) in index.html — not loaded from Contentful.
+      // await ContentRenderer.renderFaqs('#faq-container', true, 'homePageFaq');
 
     } catch (error) {
       console.error('Failed to initialize home page:', error);
