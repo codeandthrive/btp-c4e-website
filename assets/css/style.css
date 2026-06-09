@@ -4409,6 +4409,59 @@ textarea:-ms-input-placeholder {
   padding-right: 75px;
 }
 
+@media only screen and (max-width: 767px) {
+  .sasmix-overview-section-13 .overview-content,
+  .sasmix-overview-section-14 .overview-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .sasmix-overview-section-02.sasmix-overview-section-13
+    .overview-content {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .sasmix-overview-section-13 .overview-image-wrap .image img {
+    display: block;
+    width: 100%;
+    max-width: 447px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sasmix-overview-section-02.sasmix-overview-section-13
+    .section-title-wrap {
+    text-align: center;
+  }
+
+  .sasmix-overview-section-02.sasmix-overview-section-13 .btn-wrap {
+    width: 100%;
+    justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .sasmix-overview-section-02.sasmix-overview-section-13 .btn-wrap .btn {
+    width: 100%;
+    max-width: 280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    transform: perspective(0) translateZ(0)
+      translateX(calc(-1 * min(55px, 15vw)));
+  }
+
+  .sasmix-features-section-08 .service-card {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
 /*--
 /*  08 - Service CSS
 /*----------------------------------------*/
