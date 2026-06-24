@@ -47,7 +47,7 @@
 /*  01. Theme default CSS
 /*----------------------------------------*/
 /*-- Google Font --*/
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&amp;family=Quicksand:wght@400;500;600;700;800&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 /*-- Common Style --*/
 *,
 *::after,
@@ -61,7 +61,7 @@ body {
   font-size: 14px;
   line-height: 1.75;
   font-weight: 400;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #69737d;
   outline: none;
   visibility: visible;
@@ -80,7 +80,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #1a1a1a;
   font-weight: 700;
   margin-top: 0;
@@ -302,7 +302,7 @@ textarea:-ms-input-placeholder {
 .section-title .title {
   font-size: 54px;
   line-height: 56px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #1a1a1a;
   margin-top: 5px;
@@ -325,7 +325,7 @@ textarea:-ms-input-placeholder {
 .section-title .sub-title {
   font-size: 15px;
   line-height: 24px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   display: inline-block;
   color: #1880c8;
@@ -359,7 +359,7 @@ textarea:-ms-input-placeholder {
   line-height: 30px;
   font-size: 14px;
   border-radius: 50px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   display: inline-block;
   background: #ededfb;
@@ -373,7 +373,7 @@ textarea:-ms-input-placeholder {
 .section-title-wrap .section-title2 .title {
   font-size: 54px;
   line-height: 66px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #001f3f;
   animation: slide-in;
@@ -396,7 +396,7 @@ textarea:-ms-input-placeholder {
 .section-title-wrap .section-title2 p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 20px;
@@ -636,13 +636,13 @@ textarea:-ms-input-placeholder {
   display: inline-block;
   overflow: hidden;
   transform: perspective(0) translateZ(0);
-  background: #1880c8;
+  background: #1680fb;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   border-color: transparent;
   color: #ffffff;
   border-radius: 5px;
   font-size: 18px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   height: 55px;
   line-height: 55px;
@@ -685,7 +685,7 @@ textarea:-ms-input-placeholder {
   line-height: 45px;
   font-size: 14px;
   padding: 0 40px;
-  background: #1880c8;
+  background: #1680fb;
   color: #ffffff;
 }
 
@@ -694,13 +694,13 @@ textarea:-ms-input-placeholder {
   line-height: 48px;
   font-size: 18px;
   padding: 0 45px;
-  background: #1880c8;
+  background: #1680fb;
   box-shadow: 11px 10px 38px 0 rgba(46, 63, 99, 0.15);
   color: #ffffff;
 }
 .btn-4:hover {
   background: #ffffff;
-  color: #1880c8;
+  color: #1680fb;
 }
 
 .btn-round {
@@ -739,13 +739,13 @@ textarea:-ms-input-placeholder {
 }
 
 .btn-primary {
-  background-color: #1880c8;
-  border-color: #1880c8;
+  background-color: #1680fb;
+  border-color: #1680fb;
   color: #ffffff;
 }
 .btn-primary:hover {
-  background-color: #1880c8;
-  border-color: #1880c8;
+  background-color: #1680fb;
+  border-color: #1680fb;
 }
 
 .btn-secondary {
@@ -765,10 +765,10 @@ textarea:-ms-input-placeholder {
   box-shadow: 11px 10px 38px 0 rgba(46, 63, 99, 0.15);
 }
 .btn-white::after {
-  background: #1880c8;
+  background: #1680fb;
 }
 .btn-white::before {
-  background: #1880c8;
+  background: #1680fb;
 }
 
 /*----------------------------------------*/
@@ -913,7 +913,7 @@ textarea:-ms-input-placeholder {
   color: #001f3f;
   font-size: 16px;
   line-height: 20px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   padding: 35px 0;
   text-transform: capitalize;
@@ -995,7 +995,7 @@ textarea:-ms-input-placeholder {
 
 .header-btn-wrap .sing-in {
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #001f3f;
 }
@@ -2480,7 +2480,7 @@ textarea:-ms-input-placeholder {
   .rating
   span {
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
 }
@@ -2491,7 +2491,7 @@ textarea:-ms-input-placeholder {
   .rating-wrap
   p {
   font-size: 18px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
 }
@@ -2828,7 +2828,7 @@ textarea:-ms-input-placeholder {
 .sasmix-brand-section-03 .tp-brand-img .title {
   font-size: 18px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #001f3f;
   margin-left: 5px;
@@ -2866,7 +2866,7 @@ textarea:-ms-input-placeholder {
 .sasmix-brand-section-04 .brand-title {
   font-size: 22px;
   line-height: 34px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #000000;
   margin-bottom: 25px;
@@ -2889,7 +2889,7 @@ textarea:-ms-input-placeholder {
 .sasmix-brand-section-05 .tp-brand-img .title {
   font-size: 18px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #001f3f;
   margin-left: 5px;
@@ -3065,13 +3065,13 @@ textarea:-ms-input-placeholder {
   .rating
   span {
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
 }
 .sasmix-features-section .feat-review-wrap .review-btn-wrap .rating-wrap p {
   font-size: 18px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
 }
@@ -3323,7 +3323,7 @@ textarea:-ms-input-placeholder {
 .features-item-03 .feat-content .download-link {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #1880c8;
   margin-top: 10px;
@@ -3416,7 +3416,7 @@ textarea:-ms-input-placeholder {
 .sasmix-features-section-06 .feat-text p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
 }
@@ -3627,7 +3627,7 @@ textarea:-ms-input-placeholder {
 .single-counter .content span {
   font-size: 90px;
   line-height: 66px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   letter-spacing: 1px;
   font-weight: 700;
   color: #001f3f;
@@ -3646,7 +3646,7 @@ textarea:-ms-input-placeholder {
 }
 .single-counter .content p {
   font-size: 20px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #001f3f;
 }
@@ -3664,14 +3664,14 @@ textarea:-ms-input-placeholder {
 .counter-section-02 .counter-left p {
   font-size: 54px;
   line-height: 72px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #001f3f;
 }
 .counter-section-02 .counter-left .download-link {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #1880c8;
   margin-top: 30px;
@@ -3777,7 +3777,7 @@ textarea:-ms-input-placeholder {
 .counter-section-03 .counter-title-wrap .download-link {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #1880c8;
   margin-top: 20px;
@@ -3908,7 +3908,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section .overview-content p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 20px;
@@ -3938,14 +3938,14 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section .overview-list-item .content .title {
   font-size: 20px;
   line-height: 32px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
 }
 .sasmix-overview-section .overview-list-item .content p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 0;
@@ -3992,7 +3992,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-02 .overview-list-item .content p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
 }
@@ -4025,7 +4025,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-03 .overview-content .download-link {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #1680fb;
   margin-top: 25px;
@@ -4056,7 +4056,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-04 .overview-content .download-link {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #1680fb;
   margin-top: 25px;
@@ -4087,7 +4087,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-05 .overview-wrap .overview-content p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 20px;
@@ -4149,7 +4149,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-07 .overview-list-item .number span {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
 }
@@ -4161,7 +4161,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-07 .overview-list-item .content p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
 }
@@ -4299,7 +4299,7 @@ textarea:-ms-input-placeholder {
 .sasmix-overview-section-09 .overview-content p {
   font-size: 18px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 20px;
@@ -4577,7 +4577,7 @@ textarea:-ms-input-placeholder {
 .sasmix-service-section-02 .service-bottom-text p {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #001f3f;
 }
@@ -4663,14 +4663,14 @@ textarea:-ms-input-placeholder {
 .single-pricing .pricing-badge .title {
   font-size: 18px;
   line-height: 24px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #000000;
 }
 .single-pricing .pricing-badge p {
   font-size: 18px;
   line-height: 24px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 10px;
@@ -4826,7 +4826,7 @@ textarea:-ms-input-placeholder {
 .single-testimonial .testimonial-content p {
   font-size: 22px;
   line-height: 34px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #54595f;
   margin-top: 10px;
@@ -4834,7 +4834,7 @@ textarea:-ms-input-placeholder {
 .single-testimonial .testimonial-content .name-info {
   font-size: 14px;
   line-height: 24px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #000000;
   margin-top: 10px;
@@ -4963,7 +4963,7 @@ textarea:-ms-input-placeholder {
 .single-testimonial-02 .testimonial-content p {
   font-size: 36px;
   line-height: 56px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   color: #001f3f;
   margin-top: 15px;
@@ -4977,7 +4977,7 @@ textarea:-ms-input-placeholder {
 .single-testimonial-02 .testimonial-content .name-info {
   font-size: 14px;
   line-height: 24px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #000000;
   margin-top: 15px;
@@ -5124,7 +5124,7 @@ textarea:-ms-input-placeholder {
   font-size: 24px;
   line-height: 36px;
   color: #001f3f;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: inline-block;
   font-weight: 600;
   text-transform: capitalize;
@@ -5286,7 +5286,7 @@ textarea:-ms-input-placeholder {
   font-size: 24px;
   line-height: 36px;
   color: #001f3f;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: inline-block;
   font-weight: 600;
   text-transform: capitalize;
@@ -5351,7 +5351,7 @@ textarea:-ms-input-placeholder {
 .sasmix-faq-section-03 .faq-bottom-text p {
   font-size: 20px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #ffffff;
 }
@@ -5528,7 +5528,7 @@ textarea:-ms-input-placeholder {
 }
 .single-blog .blog-btn .read-more {
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
   margin-top: 15px;
@@ -5688,7 +5688,7 @@ textarea:-ms-input-placeholder {
   right: 0;
   color: #002e5b;
   font-size: 36px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   transition: all 0.3s linear;
 }
@@ -5696,7 +5696,7 @@ textarea:-ms-input-placeholder {
   content: "-";
 }
 .sasmix-event-accordion-toggle .time {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #69737d;
@@ -5800,7 +5800,7 @@ textarea:-ms-input-placeholder {
 }
 .single-team .team-content .team-name-deg .team-deg {
   font-size: 13px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #ffffff;
 }
@@ -6077,7 +6077,7 @@ textarea:-ms-input-placeholder {
 .sidebar-widget .recent-posts ul li .post-link .post-text .title {
   font-size: 16px;
   line-height: 24px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #001f3f;
   transition: all 0.3s linear;
@@ -6272,7 +6272,7 @@ textarea:-ms-input-placeholder {
 .blog-details-post .single-blog .blog-content p {
   font-size: 16px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 10px;
@@ -6351,7 +6351,7 @@ textarea:-ms-input-placeholder {
 .blog-details-post .blog-details-content .blog-details-text p {
   font-size: 16px;
   line-height: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #54595f;
   margin-top: 10px;
@@ -6390,7 +6390,7 @@ textarea:-ms-input-placeholder {
   .label {
   font-size: 14px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #333333;
   margin-right: 10px;
@@ -6620,7 +6620,7 @@ textarea:-ms-input-placeholder {
   .date {
   font-size: 12px;
   line-height: 24px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   color: #7a8699;
 }
@@ -6737,7 +6737,7 @@ textarea:-ms-input-placeholder {
   p {
   font-size: 16px;
   line-height: 24px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   margin-top: 5px;
 }
@@ -6802,7 +6802,7 @@ textarea:-ms-input-placeholder {
 .blog-details-post .blog-details-content .comment-wrap .comment-form p {
   font-size: 14px;
   line-height: 30px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #686f7a;
 }
@@ -6841,7 +6841,7 @@ textarea:-ms-input-placeholder {
   .form-control::-webkit-input-placeholder {
   opacity: 0.95;
   font-size: 13px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #9d9d9d;
   font-weight: 400;
 }
@@ -6854,7 +6854,7 @@ textarea:-ms-input-placeholder {
   .form-control:-moz-placeholder {
   opacity: 0.95;
   font-size: 13px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #9d9d9d;
   font-weight: 400;
 }
@@ -6867,7 +6867,7 @@ textarea:-ms-input-placeholder {
   .form-control::-moz-placeholder {
   opacity: 0.95;
   font-size: 13px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #9d9d9d;
   font-weight: 400;
 }
@@ -6880,7 +6880,7 @@ textarea:-ms-input-placeholder {
   .form-control:-ms-input-placeholder {
   opacity: 0.95;
   font-size: 13px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #9d9d9d;
   font-weight: 400;
 }
@@ -7014,7 +7014,7 @@ textarea:-ms-input-placeholder {
   )::-webkit-input-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
@@ -7026,7 +7026,7 @@ textarea:-ms-input-placeholder {
   ):-moz-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
@@ -7038,7 +7038,7 @@ textarea:-ms-input-placeholder {
   )::-moz-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
@@ -7050,7 +7050,7 @@ textarea:-ms-input-placeholder {
   ):-ms-input-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
@@ -7083,28 +7083,28 @@ textarea:-ms-input-placeholder {
   textarea::-webkit-input-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
 .contact-form .contact-form-wrap .single-form textarea:-moz-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
 .contact-form .contact-form-wrap .single-form textarea::-moz-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
 .contact-form .contact-form-wrap .single-form textarea:-ms-input-placeholder {
   opacity: 0.95;
   font-size: 16px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #54595f;
   font-weight: 500;
 }
@@ -7372,7 +7372,7 @@ textarea:-ms-input-placeholder {
   .form-control::-webkit-input-placeholder {
   opacity: 0.95;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #787884;
   font-weight: 400;
 }
@@ -7384,7 +7384,7 @@ textarea:-ms-input-placeholder {
   .form-control:-moz-placeholder {
   opacity: 0.95;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #787884;
   font-weight: 400;
 }
@@ -7396,7 +7396,7 @@ textarea:-ms-input-placeholder {
   .form-control::-moz-placeholder {
   opacity: 0.95;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #787884;
   font-weight: 400;
 }
@@ -7408,7 +7408,7 @@ textarea:-ms-input-placeholder {
   .form-control:-ms-input-placeholder {
   opacity: 0.95;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #787884;
   font-weight: 400;
 }
@@ -7591,7 +7591,7 @@ textarea:-ms-input-placeholder {
 .footer-widget .footer-widget-title {
   font-size: 18px;
   line-height: 36px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #ffffff;
 }

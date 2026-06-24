@@ -1,0 +1,199 @@
+/* ============================================================
+   Home page UI/UX polish — scoped overrides on top of style.css
+   Touches only the home page sections (hero / overview / faq).
+   ============================================================ */
+
+/* ---------- Hero: full-screen (header is absolute, so it sits inside) ---------- */
+.sasmix-hero-section-05 {
+  position: relative;
+  padding-top: 120px; /* clear the overlaid absolute header */
+  padding-bottom: 40px;
+}
+.sasmix-hero-section-05 .container {
+  width: 100%;
+}
+
+/* Headline */
+.sasmix-hero-section-05 .hero-content {
+  padding: 0;
+}
+.sasmix-hero-section-05 .hero-content .title {
+  font-size: clamp(38px, 4.4vw, 62px);
+  line-height: 1.06;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #0d294a;
+  margin-bottom: 0;
+}
+.sasmix-hero-section-05 .hero-content .title span {
+  color: #1680fb;
+}
+.sasmix-hero-section-05 .hero-content .text {
+  font-size: 19px;
+  line-height: 1.72;
+  font-weight: 400;
+  color: #45586b;
+  max-width: 540px;
+  margin-top: 26px;
+}
+
+/* Hero call-to-action group */
+.hero-btn-group {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.sasmix-hero-section-05 .hero-btn-group .btn {
+  height: 58px;
+  line-height: 58px;
+  padding: 0 38px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease,
+    color 0.25s ease;
+}
+.hero-cta-primary {
+  box-shadow: 0 10px 24px rgba(22, 128, 251, 0.28);
+}
+.hero-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(22, 128, 251, 0.4);
+  background: #136dd5;
+  color: #fff;
+}
+.sasmix-hero-section-05 .hero-btn-group .hero-cta-secondary {
+  background: transparent;
+  color: #0d294a;
+  box-shadow: inset 0 0 0 2px rgba(13, 41, 74, 0.16);
+}
+.sasmix-hero-section-05 .hero-btn-group .hero-cta-secondary:hover {
+  transform: translateY(-3px);
+  background: #0d294a;
+  color: #fff;
+  box-shadow: inset 0 0 0 2px #0d294a, 0 12px 26px rgba(13, 41, 74, 0.22);
+}
+
+/* Hero image — soften, lift, and keep it within the viewport */
+.sasmix-hero-section-05 .hero-images {
+  padding: 0;
+}
+.sasmix-hero-section-05 .hero-images .image img {
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(13, 41, 74, 0.18);
+  width: 100%;
+  max-height: 74vh;
+  object-fit: cover;
+}
+
+/* Tone down the decorative shapes so they read as accents, not clutter */
+.sasmix-hero-section-05 .shape-1 {
+  opacity: 0.45;
+  left: 2%;
+}
+.sasmix-hero-section-05 .shape-2 {
+  opacity: 0.6;
+}
+
+/* Full-screen hero on tablet/desktop where the layout is side-by-side */
+@media (min-width: 768px) {
+  .sasmix-hero-section-05 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .sasmix-hero-section-05 .row {
+    width: 100%;
+  }
+}
+
+/* ---------- Overview cards (Consulting / Xelerator) ---------- */
+.sasmix-overview-section-09 .overview-image .image {
+  overflow: hidden;
+  border-radius: 18px;
+}
+.sasmix-overview-section-09 .overview-image .image img {
+  border-radius: 18px;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.sasmix-overview-section-09 .overview-image:hover .image img {
+  transform: scale(1.04);
+}
+.sasmix-overview-section-09 .overview-image .image-content {
+  box-shadow: 0 18px 40px rgba(13, 41, 74, 0.16);
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+.sasmix-overview-section-09 .overview-image:hover .image-content {
+  transform: translateY(-4px);
+}
+.sasmix-overview-section-09 .overview-content .title {
+  letter-spacing: -0.5px;
+}
+.sasmix-overview-section-09 .overview-content .btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.sasmix-overview-section-09 .overview-content .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(22, 128, 251, 0.3);
+}
+
+/* ---------- FAQ ---------- */
+.sasmix-faq-section-04 .section-title2 .title {
+  letter-spacing: -0.5px;
+}
+.sasmix-faq-section-04 .accordion-item {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(13, 41, 74, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.sasmix-faq-section-04 .accordion-item:hover {
+  box-shadow: 0 10px 28px rgba(13, 41, 74, 0.12);
+}
+.sasmix-faq-section-04 .accordion-button {
+  transition: color 0.25s ease, background 0.25s ease;
+}
+.sasmix-faq-section-04 .accordion-button:not(.collapsed) .title {
+  color: #1680fb;
+}
+.sasmix-faq-section-04 .accordion-body {
+  line-height: 1.7;
+}
+
+/* ---------- Responsive (stacked layout < 768px) ---------- */
+.sasmix-hero-section-05 .hero-content .title {
+  overflow-wrap: break-word;
+}
+@media (max-width: 767px) {
+  .sasmix-hero-section-05 {
+    padding-top: 130px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  .sasmix-hero-section-05 .hero-content .text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btn-group {
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero-btn-group .btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .sasmix-hero-section-05 .hero-images {
+    margin-top: 36px;
+  }
+  .sasmix-hero-section-05 .hero-images .image img {
+    max-height: none;
+    border-radius: 16px;
+  }
+}

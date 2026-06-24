@@ -65,6 +65,18 @@
           heroDescription.textContent = homePage.fields.heroDescription;
         }
 
+        // Hero CTA buttons
+        const heroPrimaryBtn = document.querySelector('.hero-btn-group .hero-cta-primary');
+        if (heroPrimaryBtn) {
+          if (homePage.fields.heroPrimaryButtonText) heroPrimaryBtn.textContent = homePage.fields.heroPrimaryButtonText;
+          if (homePage.fields.heroPrimaryButtonUrl) heroPrimaryBtn.href = homePage.fields.heroPrimaryButtonUrl;
+        }
+        const heroSecondaryBtn = document.querySelector('.hero-btn-group .hero-cta-secondary');
+        if (heroSecondaryBtn) {
+          if (homePage.fields.heroSecondaryButtonText) heroSecondaryBtn.textContent = homePage.fields.heroSecondaryButtonText;
+          if (homePage.fields.heroSecondaryButtonUrl) heroSecondaryBtn.href = homePage.fields.heroSecondaryButtonUrl;
+        }
+
         // Hero image
         const heroImage = ContentfulClient.resolveAssetUrl(homePage, 'heroImage', includes);
         if (heroImage) {
