@@ -1,9 +1,23 @@
 /**
  * FAQ Page Content Loader
- * Loads and renders Contentful content for the FAQ page
+ * Page chrome comes from the faqPage singleton; the FAQ items come from the
+ * shared `faq` collection (the same source the home page uses).
  */
 
 (function () {
+  const $ = (sel) => document.querySelector(sel);
+
+  const setText = (sel, val) => {
+    const el = $(sel);
+    if (el && val != null) el.textContent = val;
+  };
+  const setHeadingWithIcon = (sel, val) => {
+    const el = $(sel);
+    if (!el || !val) return;
+    const img = el.querySelector('img');
+    el.innerHTML = (img ? img.outerHTML + ' ' : '') + val;
+  };
+
   async function initFaqPage() {
     if (!ContentfulClient.isConfigured()) {
       console.warn('Contentful not configured. Using static content.');
@@ -11,50 +25,37 @@
     }
 
     try {
-      // Initialize common elements
       await ContentRenderer.initCommon();
 
-      // Load FAQ page specific content
-      const faqPageData = await ContentfulClient.getFaqPage();
+      const data = await ContentfulClient.getFaqPage();
+      if (data) {
+        const { entry, includes } = data;
+        const f = entry.fields;
 
-      if (faqPageData) {
-        const { entry: faqPage, includes } = faqPageData;
+        ContentRenderer.updateMetaTags(f.metaTitle, f.metaDescription);
 
-        // Update meta tags
-        ContentRenderer.updateMetaTags(
-          faqPage.fields.metaTitle,
-          faqPage.fields.metaDescription
-        );
+        // Banner + section headings
+        setText('.page-banner .title', f.bannerTitle);
+        setHeadingWithIcon('.sasmix-faq-section .sub-title', f.faqSubtitle);
+        setText('.sasmix-faq-section .section-title2 .title', f.sectionTitle);
 
-        // Banner title
-        const bannerTitle = document.querySelector('.page-banner-content .title');
-        if (bannerTitle && faqPage.fields.bannerTitle) {
-          bannerTitle.textContent = faqPage.fields.bannerTitle;
-        }
-
-        // Section title
-        const sectionTitle = document.querySelector('.faq-section .section-title .title, #faq-section-title');
-        if (sectionTitle && faqPage.fields.sectionTitle) {
-          sectionTitle.textContent = faqPage.fields.sectionTitle;
-        }
-
-        // FAQ image
-        const faqImage = ContentfulClient.resolveAssetUrl(faqPage, 'faqImage', includes);
+        // FAQ side image
+        const faqImage = ContentfulClient.resolveAssetUrl(entry, 'faqImage', includes);
         if (faqImage) {
-          const faqImg = document.querySelector('.faq-images img, #faq-image');
-          if (faqImg) faqImg.src = faqImage;
+          const el = $('.faq-left .image img');
+          if (el) el.src = faqImage;
         }
       }
 
-      // Load all FAQs (not just home page ones)
-      await ContentRenderer.renderFaqs('#faq-accordion', false, 'faqPageAccordion');
+      // Render ALL FAQs from the shared collection into the accordion container
+      await ContentRenderer.renderFaqs('.faq-accordion', false, 'faqPageAccordion');
 
+      if (typeof AOS !== 'undefined') AOS.refresh();
     } catch (error) {
       console.error('Failed to initialize FAQ page:', error);
     }
   }
 
-  // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initFaqPage);
   } else {
