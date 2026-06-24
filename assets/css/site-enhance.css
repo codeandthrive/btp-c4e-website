@@ -160,3 +160,265 @@
   color: #1680fb;
   font-weight: 500;
 }
+
+/* ===============================================================
+   INNER PAGES — banner + xelerator + about + contact polish
+   (scoped by page-unique selectors; safe to load everywhere)
+   =============================================================== */
+
+/* ---------- Page banner (xelerator / about / faq / contact) → light ---------- */
+.page-banner-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e7ebf5 100%) !important;
+  min-height: 420px;
+}
+.page-banner .title {
+  color: #0d294a;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  font-size: clamp(38px, 4.6vw, 58px);
+  line-height: 1.08;
+}
+.page-banner .breadcrumb {
+  margin-top: 16px;
+}
+.page-banner .breadcrumb .breadcrumb-item {
+  color: #5a6b7b;
+}
+.page-banner .breadcrumb .breadcrumb-item a {
+  color: #1680fb;
+}
+.page-banner .breadcrumb .breadcrumb-item.active {
+  color: #5a6b7b;
+}
+.page-banner .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: #9aa7b5;
+}
+.page-banner-section .shape-1,
+.page-banner-section .shape-2 {
+  opacity: 0.22;
+}
+
+/* ---------- Shared heading tightening ---------- */
+.section-title2 .title {
+  letter-spacing: -0.6px;
+}
+
+/* Reusable accent pill (xelerator + about sub-titles) */
+#xel-intro .overview-content .sub-title,
+#xel-capabilities .sub-title,
+#xel-how .sub-title,
+#about-who .sub-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(13, 41, 74, 0.08);
+  border-radius: 100px;
+  padding: 9px 20px;
+  font-weight: 600;
+  color: #1680fb;
+  margin-bottom: 20px;
+}
+
+/* =================== XELERATOR =================== */
+/* Intro */
+#xel-intro .section-title2 .title {
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+  font-weight: 800;
+  color: #0d294a;
+}
+#xel-intro .overview-content > p {
+  color: #5a6b7b;
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+#xel-intro .overview-image-wrap .image img {
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(13, 41, 74, 0.16);
+}
+#xel-intro .overview-list-item .content p {
+  color: #45586b;
+  font-weight: 500;
+}
+#xel-intro .overview-list-item .icon span {
+  background: #e8f0fe;
+  color: #1680fb;
+}
+/* Login (secondary) button → outline */
+#xel-intro .btn-2 {
+  background: transparent;
+  color: #0d294a;
+  box-shadow: inset 0 0 0 2px rgba(13, 41, 74, 0.18);
+}
+#xel-intro .btn-2::before,
+#xel-intro .btn-2::after {
+  display: none;
+}
+#xel-intro .btn-2:hover {
+  background: #0d294a;
+  color: #fff;
+}
+
+/* Capabilities cards */
+#xel-capabilities .section-title2 .title {
+  letter-spacing: -1px;
+}
+#xel-capabilities .service-card {
+  border: 1px solid #e7ebf6 !important;
+  border-radius: 18px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#xel-capabilities .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(13, 41, 74, 0.13) !important;
+}
+
+/* How it works */
+#xel-how .section-title2 .title {
+  letter-spacing: -1px;
+}
+#xel-how .overview-image-wrap .image img {
+  border-radius: 24px;
+  box-shadow: 0 24px 50px rgba(13, 41, 74, 0.16);
+}
+#xel-steps .overview-list-item .icon span {
+  background: #1680fb;
+  color: #fff;
+}
+#xel-steps .overview-list-item .content p {
+  color: #45586b;
+}
+
+/* Counter band → brand gradient */
+#xel-counter .counter-wrap {
+  background: linear-gradient(135deg, #1680fb 0%, #0d4ec4 100%) !important;
+}
+#xel-counter .single-counter,
+#xel-counter .single-counter span,
+#xel-counter .single-counter p {
+  color: #ffffff !important;
+}
+
+/* CTA band → brand gradient card */
+#xel-cta .cta-wrap {
+  background: linear-gradient(135deg, #1680fb 0%, #0d4ec4 100%) !important;
+  border-radius: 28px;
+}
+#xel-cta .cta-content .title {
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+#xel-cta .cta-content p {
+  color: rgba(255, 255, 255, 0.88);
+}
+#xel-cta .cta-btn .btn {
+  background: #ffffff;
+  color: #1680fb;
+}
+#xel-cta .cta-btn .btn:hover {
+  background: #0d294a;
+  color: #ffffff;
+}
+
+/* =================== ABOUT =================== */
+#about-who .section-title2 .title {
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+  font-weight: 800;
+}
+#about-who .overview-content p {
+  color: #5a6b7b;
+  font-weight: 400;
+  line-height: 1.75;
+}
+#about-who .overview-image-wrap .image img {
+  border-radius: 24px;
+  box-shadow: 0 24px 50px rgba(13, 41, 74, 0.14);
+}
+#about-who .ab-btn .btn {
+  border-radius: 10px;
+}
+#about-cta .section-title2 .title {
+  letter-spacing: -1px;
+}
+#about-cta .download-link {
+  color: #1680fb;
+  font-weight: 600;
+}
+
+/* =================== CONTACT =================== */
+.contact-section .section-title2 .title {
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+.contact-section .single-contact-info {
+  background: #fff;
+  border: 1px solid #e7ebf6;
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 18px rgba(13, 41, 74, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-section .single-contact-info:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(13, 41, 74, 0.1);
+}
+.contact-section .single-contact-info .info-icon {
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
+  font-size: 24px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1680fb 0%, #0d4ec4 100%);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(22, 128, 251, 0.3);
+  transition: transform 0.3s ease;
+}
+.contact-section .single-contact-info .info-icon i {
+  color: #ffffff;
+}
+.contact-section .single-contact-info:hover .info-icon {
+  transform: scale(1.06) rotate(-3deg);
+}
+.contact-section .single-contact-info .info-content .title {
+  color: #0d294a;
+}
+.contact-section .contact-form-wrap {
+  background: #fff;
+  border: 1px solid #e7ebf6;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 10px 40px rgba(13, 41, 74, 0.06);
+}
+.contact-section .single-form .form-control {
+  border: 1px solid #dfe5f1;
+  border-radius: 10px;
+  padding: 14px 18px;
+  background: #f8faff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.contact-section .single-form .form-control:focus {
+  border-color: #1680fb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(22, 128, 251, 0.12);
+  outline: none;
+}
+.contact-section .form-btn .btn {
+  border-radius: 10px;
+}
+
+/* About: drop the leftover purple count-bg tint behind Who-We-Are + CTA */
+.bg-wrap {
+  background-image: none !important;
+}
+#about-cta .counter-bg-wrap-02 {
+  background: #eef1fb;
+  border-radius: 28px;
+  padding: 56px 40px;
+}
