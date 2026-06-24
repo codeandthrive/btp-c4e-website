@@ -189,6 +189,7 @@
       </div>
 
       <div
+        id="xel-intro"
         class="section sasmix-overview-section sasmix-overview-section-02 sasmix-overview-section-13 section-padding-02"
       >
         <div class="container">
@@ -249,7 +250,7 @@
                     designed to transform how organizations modernize legacy
                     integrations.
                   </p>
-                  <div class="overview-list-wrap" style="margin-bottom: 25px">
+                  <div class="overview-list-wrap" id="xel-platform-list" style="margin-bottom: 25px">
                     <div class="row">
                       <div class="col-lg-6">
                         <div
@@ -309,6 +310,7 @@
       </div>
 
       <div
+        id="xel-capabilities"
         class="section sasmix-features-section sasmix-features-section-07 sasmix-features-section-08"
       >
         <div class="features-bg-wrap section-padding">
@@ -333,7 +335,7 @@
                 data-aos-delay="700"
                 data-aos="fade-up"
               >
-                <div class="row g-4">
+                <div class="row g-4" id="xel-capabilities-grid">
                   <div class="col-md-6 col-lg-4">
                     <div class="service-card" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08); height: 100%;">
                       <div class="service-icon" style="margin-bottom: 20px">
@@ -396,6 +398,7 @@
       </div>
 
       <div
+        id="xel-how"
         class="section sasmix-overview-section sasmix-overview-section-13 sasmix-overview-section-14 section-padding"
       >
         <div class="container">
@@ -416,7 +419,7 @@
                       <h2 class="title">From Discovery to Deployment</h2>
                     </div>
                   </div>
-                  <div class="overview-list-wrap">
+                  <div class="overview-list-wrap" id="xel-steps">
                     <div class="overview-list-item" data-aos-delay="700" data-aos="fade-up">
                       <div class="icon"><span><i class="fas fa-check"></i></span></div>
                       <div class="content"><p><strong>Discover &amp; Analyze</strong> - Scan and map legacy integrations.</p></div>
@@ -456,14 +459,14 @@
         </div>
       </div>
 
-      <div class="section sasmix-counter-section sasmix-counter-section-02">
+      <div id="xel-counter" class="section sasmix-counter-section sasmix-counter-section-02">
         <div
           class="counter-wrap"
           style="background-image: url(assets/images/bg/count-bg.png)"
         >
           <div class="container">
             <div class="counter-content-wrap">
-              <div class="row">
+              <div class="row" id="xel-stats">
                 <div class="col-lg-3 col-sm-6">
                   <div class="single-counter">
                     <span class="counter">50</span><span>%</span>
@@ -494,7 +497,7 @@
         </div>
       </div>
 
-      <div class="section sasmix-cta-section section-padding">
+      <div id="xel-cta" class="section sasmix-cta-section section-padding">
         <div class="container">
           <div class="cta-wrap" style="background-image: url(assets/images/bg/cta-bg.png)">
             <div class="row align-items-center">
@@ -619,5 +622,10 @@
     <script src="assets/js/plugins/odometer.min.js"></script>
     <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Contentful CMS Integration -->
+    <script src="assets/js/contentful/client.js"></script>
+    <script src="assets/js/contentful/renderer.js"></script>
+    <script src="assets/js/contentful/pages/xelerator.js"></script>
   </body>
 </html>

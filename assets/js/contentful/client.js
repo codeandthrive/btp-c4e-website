@@ -218,6 +218,20 @@ const ContentfulClient = (function () {
     },
 
     /**
+     * Get Xelerator page content (singleton; capabilities/steps/stats are JSON list fields)
+     */
+    async getXeleratorPage() {
+      const response = await getEntries('xeleratorPage', { limit: 1, include: 2 });
+      if (response.items && response.items.length > 0) {
+        return {
+          entry: response.items[0],
+          includes: response.includes
+        };
+      }
+      return null;
+    },
+
+    /**
      * Get service page content
      */
     async getServicePage() {
