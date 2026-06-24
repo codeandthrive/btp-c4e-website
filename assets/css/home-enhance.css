@@ -232,33 +232,11 @@
   }
   .sasmix-overview-section-09 .overview-content {
     padding: 48px 32px;
+    margin-top: 24px; /* gap between the stacked image and panel */
   }
 }
 
-/* ---------- FAQ ---------- */
-.sasmix-faq-section-04 .section-title2 .title {
-  letter-spacing: -0.5px;
-}
-.sasmix-faq-section-04 .accordion-item {
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 14px;
-  background: #fff;
-  box-shadow: 0 4px 18px rgba(13, 41, 74, 0.06);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-.sasmix-faq-section-04 .accordion-item:hover {
-  box-shadow: 0 10px 28px rgba(13, 41, 74, 0.12);
-}
-.sasmix-faq-section-04 .accordion-button {
-  transition: color 0.25s ease, background 0.25s ease;
-}
-.sasmix-faq-section-04 .accordion-button:not(.collapsed) .title {
-  color: #1680fb;
-}
-.sasmix-faq-section-04 .accordion-body {
-  line-height: 1.7;
-}
+/* FAQ polish now lives in site-enhance.css (shared by home + faq page). */
 
 /* ---------- Responsive (stacked layout < 768px) ---------- */
 .sasmix-hero-section-05 .hero-content .title {
