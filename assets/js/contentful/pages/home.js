@@ -72,23 +72,45 @@
           if (heroImg) heroImg.src = heroImage;
         }
 
-        // Consulting section
-        const consultingTitle = document.querySelector('.sasmix-overview-section .section-title2 .title');
-        if (consultingTitle && homePage.fields.consultingTitle) {
-          consultingTitle.textContent = homePage.fields.consultingTitle;
-        }
+        const f = homePage.fields;
 
-        const consultingDesc = document.querySelector('.sasmix-overview-section .overview-content > p');
-        if (consultingDesc && homePage.fields.consultingDescription) {
-          consultingDesc.textContent = homePage.fields.consultingDescription;
-        }
+        // Helper: set the text of a heading while preserving a leading decorative <img>
+        const setHeadingWithIcon = (selector, value) => {
+          const el = document.querySelector(selector);
+          if (!el || !value) return;
+          const img = el.querySelector('img');
+          el.innerHTML = (img ? img.outerHTML + ' ' : '') + value;
+        };
+        const setText = (selector, value) => {
+          const el = document.querySelector(selector);
+          if (el && value != null) el.textContent = value;
+        };
+        const setImg = (selector, url) => {
+          if (!url) return;
+          const el = document.querySelector(selector);
+          if (el) el.src = url;
+        };
 
-        // Consulting image
-        const consultingImage = ContentfulClient.resolveAssetUrl(homePage, 'consultingImage', includes);
-        if (consultingImage) {
-          const consultingImg = document.querySelector('.sasmix-overview-section .overview-image .image img');
-          if (consultingImg) consultingImg.src = consultingImage;
-        }
+        // ---- Consulting section (#consulting-section) ----
+        setHeadingWithIcon('#consulting-section .sub-title', f.consultingTag);
+        setText('#consulting-section .section-title2 .title', f.consultingTitle);
+        setText('#consulting-section .overview-content > p', f.consultingDescription);
+        setText('#consulting-section .image-content .image-text .title', f.consultingBadgeTitle);
+        setText('#consulting-section .image-content .image-text p', f.consultingBadgeText);
+        setImg('#consulting-section .overview-image .image img',
+               ContentfulClient.resolveAssetUrl(homePage, 'consultingImage', includes));
+
+        // ---- Xelerator section (#xelerator-section) ----
+        setText('#xelerator-section .overview-content .title', f.xeleratorTitle);
+        setText('#xelerator-section .overview-content p', f.xeleratorDescription);
+        setText('#xelerator-section .image-content .image-text .title', f.xeleratorBadgeTitle);
+        setText('#xelerator-section .image-content .image-text p', f.xeleratorBadgeText);
+        setImg('#xelerator-section .overview-image .image img',
+               ContentfulClient.resolveAssetUrl(homePage, 'xeleratorImage', includes));
+
+        // ---- FAQ section heading ----
+        setHeadingWithIcon('.sasmix-faq-section .sub-title', f.faqSubtitle);
+        setText('.sasmix-faq-section .section-title2 .title', f.faqTitle);
       }
 
       // Load and render BTP Pillars
@@ -97,8 +119,8 @@
       // Load and render Services
       await ContentRenderer.renderServices('#services-container');
 
-      // FAQs use static content (Xelerator FAQs) in index.html — not loaded from Contentful.
-      // await ContentRenderer.renderFaqs('#faq-container', true, 'homePageFaq');
+      // Load and render FAQs flagged for the home page (Xelerator FAQs)
+      await ContentRenderer.renderFaqs('#faq-container', true, 'homePageFaq');
 
     } catch (error) {
       console.error('Failed to initialize home page:', error);
