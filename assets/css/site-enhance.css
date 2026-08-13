@@ -452,6 +452,508 @@
   border-radius: 10px;
 }
 
+/* =================== XELERATOR FREE TRIAL =================== */
+/* No page banner on this page — clear the absolutely-positioned header */
+#trial-hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+  padding-top: 220px;
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 1199px) {
+  #trial-hero {
+    padding-top: 190px;
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #trial-hero {
+    padding-top: 150px;
+    padding-bottom: 60px;
+  }
+}
+.trial-badge {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1680fb;
+  border-radius: 100px;
+  padding: 8px 18px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+#trial-hero .section-title2 .title {
+  font-size: clamp(32px, 3.4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -1.4px;
+  font-weight: 800;
+  color: #0d294a;
+}
+#trial-hero .trial-hero-content > p {
+  color: #5a6b7b;
+  font-size: 17px;
+  line-height: 1.75;
+  margin-top: 22px;
+  max-width: 620px;
+}
+.trial-btn-wrap {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.trial-btn-wrap .btn-2 {
+  background: transparent;
+  color: #0d294a;
+  box-shadow: inset 0 0 0 2px rgba(13, 41, 74, 0.18);
+}
+.trial-btn-wrap .btn-2::before,
+.trial-btn-wrap .btn-2::after {
+  display: none;
+}
+.trial-btn-wrap .btn-2:hover {
+  background: #0d294a;
+  color: #fff;
+}
+
+/* Hero stat chips — row beneath the copy */
+.trial-stat-wrap {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-top: 38px;
+}
+.trial-stat {
+  background: #fff;
+  border: 1px solid #e7ebf6;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 18px rgba(13, 41, 74, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.trial-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(13, 41, 74, 0.1);
+}
+.trial-stat .label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #8996a5;
+  margin-bottom: 6px;
+}
+.trial-stat .value {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d294a;
+  letter-spacing: -0.4px;
+}
+
+/* Overview band */
+#trial-overview .trial-overview-card {
+  background: #fff;
+  border: 1px solid #e7ebf6;
+  border-radius: 24px;
+  padding: 56px 48px;
+  box-shadow: 0 10px 40px rgba(13, 41, 74, 0.06);
+}
+#trial-overview .section-title2 .title {
+  letter-spacing: -1px;
+  color: #0d294a;
+  margin-bottom: 24px;
+}
+#trial-overview p {
+  color: #5a6b7b;
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+#trial-overview .trial-lead {
+  color: #1680fb;
+  font-weight: 700;
+  font-size: 19px;
+}
+@media (max-width: 575px) {
+  #trial-overview .trial-overview-card {
+    padding: 36px 24px;
+  }
+}
+
+/* Shared accent pill + heading for the trial sections */
+#trial-included .sub-title,
+#trial-how .sub-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(13, 41, 74, 0.08);
+  border-radius: 100px;
+  padding: 9px 20px;
+  font-weight: 600;
+  color: #1680fb;
+  margin-bottom: 20px;
+}
+#trial-included .section-title2 .title,
+#trial-how .section-title2 .title,
+#trial-form .section-title2 .title,
+#trial-faq .section-title2 .title {
+  letter-spacing: -1px;
+  color: #0d294a;
+}
+#trial-included .section-title-wrap,
+#trial-how .section-title-wrap,
+#trial-faq .section-title-wrap {
+  margin-bottom: 48px;
+}
+
+/* What's included cards */
+#trial-included {
+  background: #f8faff;
+}
+.trial-feature-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e7ebf6;
+  border-radius: 18px;
+  padding: 32px 30px;
+  box-shadow: 0 5px 24px rgba(13, 41, 74, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.trial-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(13, 41, 74, 0.13);
+}
+.trial-feature-card .icon {
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1680fb 0%, #0d4ec4 100%);
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 12px 24px rgba(22, 128, 251, 0.28);
+}
+.trial-feature-card .title {
+  font-size: 21px;
+  font-weight: 700;
+  color: #0d294a;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+.trial-feature-card p {
+  color: #5a6b7b;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* How-it-works step cards */
+.trial-step-card {
+  position: relative;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e7ebf6;
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 5px 24px rgba(13, 41, 74, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.trial-step-card:hover {
+  transform: translateY(-6px);
+  border-color: #cfe0fb;
+  box-shadow: 0 22px 44px rgba(13, 41, 74, 0.13);
+}
+.trial-step-card .step-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.trial-step-card .step-num {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  color: #1680fb;
+  letter-spacing: -1px;
+}
+.trial-step-card .step-time {
+  background: #eef1fb;
+  color: #5a6b7b;
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.trial-step-card .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d294a;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.trial-step-card p {
+  color: #5a6b7b;
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+/* Trial request form — card inside the hero */
+.trial-form-card {
+  background: #ffffff;
+  border: 1px solid #e7ebf6;
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 0 20px 60px rgba(13, 41, 74, 0.1);
+}
+@media (max-width: 991px) {
+  .trial-form-card {
+    margin-top: 56px;
+  }
+}
+@media (max-width: 575px) {
+  .trial-form-card {
+    padding: 30px 22px;
+  }
+}
+.trial-form-card .trial-form-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0d294a;
+  letter-spacing: -0.6px;
+  margin-bottom: 10px;
+}
+.trial-form-card .trial-form-note {
+  color: #5a6b7b;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+#trial-form .form-control {
+  border: 1px solid #dfe5f1;
+  border-radius: 10px;
+  padding: 13px 16px;
+  background: #f8faff;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+#trial-form .form-control:focus {
+  border-color: #1680fb;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(22, 128, 251, 0.12);
+  outline: none;
+}
+#trial-form .single-form {
+  margin-bottom: 18px;
+}
+#trial-form .single-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d294a;
+  margin-bottom: 8px;
+}
+#trial-form .single-form label .req {
+  color: #e5484d;
+}
+#trial-form .single-form textarea.form-control {
+  min-height: 96px;
+}
+#trial-form .trial-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+#trial-form .trial-consent input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #1680fb;
+}
+#trial-form .trial-consent label {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #5a6b7b;
+}
+#trial-form .trial-consent label a {
+  color: #1680fb;
+  font-weight: 600;
+}
+/* Inline "link" buttons that open the policy popups */
+.trial-policy-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #1680fb;
+  font-weight: 600;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.trial-policy-link:hover,
+.trial-policy-link:focus-visible {
+  color: #0d4ec4;
+}
+
+/* Evaluation Agreement / Privacy Policy popups */
+.trial-policy-modal .modal-content {
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(13, 41, 74, 0.25);
+}
+.trial-policy-modal .modal-header {
+  border-bottom: 1px solid #e7ebf6;
+  padding: 22px 28px;
+}
+.trial-policy-modal .modal-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: #0d294a;
+  letter-spacing: -0.4px;
+}
+.trial-policy-modal .modal-body {
+  padding: 26px 28px;
+}
+.trial-policy-modal .modal-body h6 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0d294a;
+  margin: 22px 0 8px;
+}
+.trial-policy-modal .modal-body h6:first-of-type {
+  margin-top: 24px;
+}
+.trial-policy-modal .modal-body p {
+  color: #5a6b7b;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+.trial-policy-modal .modal-body .trial-policy-contact {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e7ebf6;
+}
+.trial-policy-modal .modal-body a {
+  color: #1680fb;
+  font-weight: 600;
+}
+.trial-policy-modal .modal-footer {
+  border-top: 1px solid #e7ebf6;
+  padding: 18px 28px;
+}
+.trial-policy-modal .btn-modal-close {
+  height: 46px;
+  line-height: 46px;
+  padding: 0 30px;
+  border-radius: 10px;
+}
+#trial-form .form-btn .btn {
+  border-radius: 10px;
+  width: 100%;
+}
+#trial-form .form-btn .btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Web3Forms submission feedback */
+.trial-form-status {
+  display: none;
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.trial-form-status.is-pending,
+.trial-form-status.is-success,
+.trial-form-status.is-error {
+  display: block;
+}
+.trial-form-status.is-pending {
+  background: #eef1fb;
+  color: #5a6b7b;
+  border: 1px solid #dfe5f1;
+}
+.trial-form-status.is-success {
+  background: #e9f8ef;
+  color: #1c7a45;
+  border: 1px solid #bfe8d0;
+}
+.trial-form-status.is-error {
+  background: #fdecec;
+  color: #b42318;
+  border: 1px solid #f7cfcd;
+}
+
+/* Trial FAQ */
+#trial-faq .section-title2 .title {
+  margin-bottom: 0;
+}
+
+/* Trial CTA band */
+#trial-cta .cta-wrap {
+  background: linear-gradient(135deg, #1680fb 0%, #0d4ec4 100%) !important;
+  border-radius: 28px;
+}
+#trial-cta .cta-content .title {
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+#trial-cta .cta-content p {
+  color: rgba(255, 255, 255, 0.88);
+}
+#trial-cta .cta-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+#trial-cta .cta-btn .btn {
+  background: #ffffff;
+  color: #1680fb;
+}
+#trial-cta .cta-btn .btn:hover {
+  background: #0d294a;
+  color: #ffffff;
+}
+#trial-cta .cta-btn .btn-2 {
+  background: transparent;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.55);
+}
+#trial-cta .cta-btn .btn-2::before,
+#trial-cta .cta-btn .btn-2::after {
+  display: none;
+}
+#trial-cta .cta-btn .btn-2:hover {
+  background: #ffffff;
+  color: #1680fb;
+}
+#trial-cta .cta-btn .cta-mail {
+  flex-basis: 100%;
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+}
+#trial-cta .cta-btn .cta-mail a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* About: drop the leftover purple count-bg tint behind Who-We-Are + CTA */
 .bg-wrap {
   background-image: none !important;

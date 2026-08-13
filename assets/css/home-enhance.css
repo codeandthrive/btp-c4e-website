@@ -96,6 +96,20 @@
   opacity: 0.6;
 }
 
+/* The decorative bottom wave is a full-width 172px box pinned at z-index 1 —
+   it overlapped the CTA row and swallowed the clicks. Make every hero
+   decoration click-through and keep the real content above it. */
+.sasmix-hero-section-05 .shape-svg,
+.sasmix-hero-section-05 .shape-1,
+.sasmix-hero-section-05 .shape-2 {
+  pointer-events: none;
+}
+.sasmix-hero-section-05 .hero-content,
+.sasmix-hero-section-05 .hero-images {
+  position: relative;
+  z-index: 2;
+}
+
 /* Full-screen hero on tablet/desktop where the layout is side-by-side */
 @media (min-width: 768px) {
   .sasmix-hero-section-05 {
