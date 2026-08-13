@@ -366,6 +366,23 @@
                       </div>
                     </div>
                     <div class="col-md-12">
+                      <div class="single-form trial-consent trial-consent-optional">
+                        <input
+                          id="trial-marketing"
+                          type="checkbox"
+                          name="marketing_consent"
+                          value="Yes"
+                        />
+                        <label for="trial-marketing">
+                          I agree to receive communications from BTP C4E about
+                          Xelerator, product updates, services, events, and
+                          related offerings. I understand that I can unsubscribe
+                          or request to stop receiving communications at any
+                          time. <span class="optional-tag">(Optional)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
                       <div class="single-form trial-consent">
                         <input
                           id="trial-consent"
@@ -1051,6 +1068,8 @@
         var status = document.getElementById("trial-form-status");
         var submitBtn = form.querySelector('button[type="submit"]');
         var defaultLabel = submitBtn ? submitBtn.innerHTML : "";
+        // Optional marketing opt-in: read for the payload, never blocks submit.
+        var marketing = form.querySelector("#trial-marketing");
 
         function setStatus(state, message) {
           status.className = "trial-form-status is-" + state;
@@ -1072,6 +1091,9 @@
             .filter(Boolean)
             .join(" ");
           payload.email = payload.work_email;
+          // An unchecked box submits nothing, so record the opt-out explicitly
+          // rather than leaving the field absent from the notification.
+          payload.marketing_consent = marketing && marketing.checked ? "Yes" : "No";
 
           if (submitBtn) {
             submitBtn.disabled = true;

@@ -789,6 +789,19 @@
   color: #1680fb;
   font-weight: 600;
 }
+/* Optional marketing opt-in — sits above the required consent row */
+#trial-form .trial-consent-optional {
+  margin-bottom: 14px;
+}
+#trial-form .trial-consent-optional label {
+  font-size: 14px;
+  line-height: 1.55;
+}
+#trial-form .optional-tag {
+  color: #8996a5;
+  font-weight: 500;
+  white-space: nowrap;
+}
 /* Inline "link" buttons that open the policy popups */
 .trial-policy-link {
   padding: 0;
