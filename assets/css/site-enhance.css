@@ -885,6 +885,33 @@
   cursor: not-allowed;
 }
 
+/* Confirmation panel that replaces the form after a successful submit */
+.trial-form-success {
+  text-align: center;
+  padding: 26px 8px;
+}
+.trial-form-success:focus {
+  outline: none;
+}
+.trial-form-success .icon {
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #e9f8ef;
+  color: #1c7a45;
+  font-size: 25px;
+}
+.trial-form-success p {
+  color: #0d294a;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 500;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 /* Web3Forms submission feedback */
 .trial-form-status {
   display: none;

@@ -432,6 +432,22 @@
                     </div>
                   </div>
                 </form>
+
+                <!-- Replaces the whole form once the request goes through -->
+                <div
+                  id="trial-form-success"
+                  class="trial-form-success"
+                  role="status"
+                  aria-live="polite"
+                  tabindex="-1"
+                  hidden
+                >
+                  <div class="icon"><i class="fas fa-check"></i></div>
+                  <p>
+                    Thanks, your trial request is in. A Xelerator specialist
+                    will be in touch within 1-2 business days.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1075,9 +1091,29 @@
         // Optional marketing opt-in: read for the payload, never blocks submit.
         var marketing = form.querySelector("#trial-marketing");
 
+        var card = document.getElementById("trial-form");
+        var successPanel = document.getElementById("trial-form-success");
+        var cardTitle = card.querySelector(".trial-form-title");
+        var cardNote = card.querySelector(".trial-form-note");
+
         function setStatus(state, message) {
           status.className = "trial-form-status is-" + state;
           status.textContent = message;
+        }
+
+        function clearStatus() {
+          status.className = "trial-form-status";
+          status.textContent = "";
+        }
+
+        // Swap the entire card over to the confirmation. There is nothing left
+        // to fill in, so the heading and intro copy go with the form.
+        function showSuccessPanel() {
+          if (cardTitle) cardTitle.hidden = true;
+          if (cardNote) cardNote.hidden = true;
+          form.hidden = true;
+          successPanel.hidden = false;
+          successPanel.focus();
         }
 
         form.addEventListener("submit", function (e) {
@@ -1121,10 +1157,8 @@
             .then(function (result) {
               if (result.ok && result.data.success) {
                 form.reset();
-                setStatus(
-                  "success",
-                  "Thanks, your trial request is in. A Xelerator specialist will be in touch within 1-2 business days."
-                );
+                clearStatus();
+                showSuccessPanel();
               } else {
                 setStatus(
                   "error",
