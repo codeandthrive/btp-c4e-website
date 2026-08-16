@@ -1085,6 +1085,13 @@
         var form = document.getElementById("trial-request-form");
         if (!form) return;
 
+        // Acknowledgment mailer — paste your deployed Worker URL here.
+        // While this is empty no acknowledgment is sent and nothing appears in
+        // the Network tab. Setup takes ~5 minutes: see mailer/README.md.
+        // Mailjet credentials must NEVER appear in this file; the Worker holds
+        // them, because everything here is public via View Source.
+        var ACK_ENDPOINT = "https://btpc4e.sreeragcodes.workers.dev";
+
         var status = document.getElementById("trial-form-status");
         var submitBtn = form.querySelector('button[type="submit"]');
         var defaultLabel = submitBtn ? submitBtn.innerHTML : "";
@@ -1104,6 +1111,23 @@
         function clearStatus() {
           status.className = "trial-form-status";
           status.textContent = "";
+        }
+
+        // Fire-and-forget acknowledgment to the submitter. This must never
+        // block or fail the visible outcome: their request already reached us
+        // via Web3Forms, so a bounced courtesy email is our problem, not theirs.
+        function sendAcknowledgment(details) {
+          if (!ACK_ENDPOINT) return;
+          fetch(ACK_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: details.email,
+              first_name: details.first_name,
+            }),
+          }).catch(function () {
+            /* Logged server-side; nothing useful to show the visitor. */
+          });
         }
 
         // Swap the entire card over to the confirmation. There is nothing left
@@ -1156,6 +1180,8 @@
             })
             .then(function (result) {
               if (result.ok && result.data.success) {
+                // payload is a plain object, so it survives form.reset().
+                sendAcknowledgment(payload);
                 form.reset();
                 clearStatus();
                 showSuccessPanel();
