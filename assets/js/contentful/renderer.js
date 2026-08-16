@@ -1,5 +1,5 @@
 /**
- * Content Renderer for BTP C4E Website
+ * Content Renderer for BTPC4E Website
  * Renders Contentful content into existing HTML templates
  */
 
@@ -60,7 +60,7 @@ const ContentRenderer = (function () {
         .querySelectorAll('.header-logo img, .sidebar__logo img, .footer-logo img')
         .forEach(img => {
           img.src = logoUrl;
-          img.alt = 'BTP C4E logo';
+          img.alt = 'BTPC4E logo';
           img.classList.add('site-logo-img');
           img.width = 104;
           img.height = 117;

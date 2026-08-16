@@ -1,5 +1,5 @@
 /**
- * Contentful Client for BTP C4E Website
+ * Contentful Client for BTPC4E Website
  * Fetches content from Contentful Delivery API
  *
  * SETUP: Replace the configuration values below with your Contentful credentials
