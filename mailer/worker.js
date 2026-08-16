@@ -20,8 +20,13 @@
 // ---------------------------------------------------------------------------
 
 // Must be a sender address VERIFIED in Mailjet, or sends are rejected.
-const FROM_EMAIL = "info@btpc4e.com";
+// btpc4e.com is validated at domain level, so any address on it is allowed.
+const FROM_EMAIL = "dev@btpc4e.com";
 const FROM_NAME = "BTPC4E";
+
+// Where replies go. The email invites people to reply, and that should reach
+// the monitored inbox rather than the sending address.
+const REPLY_TO_EMAIL = "info@btpc4e.com";
 
 // Origins allowed to call this Worker. Keep localhost here while testing.
 const ALLOWED_ORIGINS = [
@@ -30,6 +35,10 @@ const ALLOWED_ORIGINS = [
   "http://127.0.0.1:5500",
   "http://localhost:5500",
 ];
+
+// Echo Mailjet's rejection reason back to the caller. Useful while setting up;
+// turn off once sends are working.
+const DEBUG_ERRORS = true;
 
 const MAILJET_ENDPOINT = "https://api.mailjet.com/v3.1/send";
 
@@ -79,6 +88,7 @@ export default {
           Messages: [
             {
               From: { Email: FROM_EMAIL, Name: FROM_NAME },
+              ReplyTo: { Email: REPLY_TO_EMAIL, Name: FROM_NAME },
               To: [{ Email: email, Name: name || email }],
               Subject: "We've received your Xelerator trial request",
               TextPart: textBody(name),
@@ -88,14 +98,34 @@ export default {
         }),
       });
 
+      const detail = await res.text();
+
       if (!res.ok) {
-        console.error("Mailjet rejected the send", res.status, await res.text());
-        return json({ error: "Send failed" }, 502, origin, allowed);
+        console.error("Mailjet rejected the send", res.status, detail);
+        // Mailjet's own reason is echoed back so setup problems (unverified
+        // sender, bad credentials) are visible without digging through logs.
+        // Safe enough: this endpoint is origin-locked. Set DEBUG_ERRORS to
+        // false once it is working.
+        return json(
+          DEBUG_ERRORS
+            ? { error: "Send failed", mailjet_status: res.status, mailjet: detail }
+            : { error: "Send failed" },
+          502,
+          origin,
+          allowed
+        );
       }
       return json({ success: true }, 200, origin, allowed);
     } catch (err) {
       console.error("Mailjet request threw", err);
-      return json({ error: "Send failed" }, 502, origin, allowed);
+      return json(
+        DEBUG_ERRORS
+          ? { error: "Send failed", threw: String(err) }
+          : { error: "Send failed" },
+        502,
+        origin,
+        allowed
+      );
     }
   },
 };
