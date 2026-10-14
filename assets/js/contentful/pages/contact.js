@@ -45,49 +45,20 @@
         }
       }
 
-      // Load site settings for contact info
-      const settingsData = await ContentfulClient.getSiteSettings();
-      if (settingsData) {
-        const settings = settingsData.entry.fields;
+      // Contact info cards (Email Address / Global Presence)
+      if (contactPage) {
+        const setCard = (cardSelector, title, text) => {
+          const card = document.querySelector(cardSelector);
+          if (!card) return;
+          const titleEl = card.querySelector('.title');
+          const textEl = card.querySelector('p');
+          if (titleEl && title) titleEl.textContent = title;
+          if (textEl && text) textEl.textContent = text;
+        };
 
-        // Email
-        const emailLinks = document.querySelectorAll('.contact-info a[href^="mailto"], #contact-email');
-        emailLinks.forEach(link => {
-          if (settings.email) {
-            link.href = `mailto:${settings.email}`;
-            link.textContent = settings.email;
-          }
-        });
-
-        // LinkedIn
-        const linkedinLinks = document.querySelectorAll('.contact-social a[href*="linkedin"], #contact-linkedin');
-        linkedinLinks.forEach(link => {
-          if (settings.linkedinUrl) {
-            link.href = settings.linkedinUrl;
-          }
-        });
-      }
-
-      // Load locations for contact info
-      const locations = await ContentfulClient.getLocations();
-      const locationsContainer = document.querySelector('#contact-locations');
-      if (locationsContainer && locations.length > 0) {
-        locationsContainer.innerHTML = `
-          <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: #1a1a2e;">Global Presence</h4>
-          <div class="row">
-            ${locations.map(loc => `
-              <div class="col-md-6 mb-3">
-                <div style="display: flex; align-items: center;">
-                  <i class="fas fa-map-marker-alt" style="color: #667eea; margin-right: 10px; font-size: 18px;"></i>
-                  <div>
-                    <strong>${loc.fields.city}</strong>
-                    <span style="color: #888; font-size: 14px;"> (${loc.fields.region})</span>
-                  </div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        `;
+        const fields = contactPage.fields;
+        setCard('#contact-email-card', fields.emailTitle, fields.email);
+        setCard('#contact-locations-card', fields.locationsTitle, fields.locations);
       }
 
     } catch (error) {
