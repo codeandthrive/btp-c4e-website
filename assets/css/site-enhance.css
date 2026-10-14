@@ -4,78 +4,133 @@
    ============================================================ */
 
 /* ---------------------------------------------------------------
-   FOOTER — unified light footer across all pages
-   (all pages now carry .footer-section-02, so text colours come
-    from the theme's light-footer rules; here we add the polish)
+   FOOTER — compact white footer across all pages: brand column,
+   blue column headings, thin vertical dividers, outlined social icon
    --------------------------------------------------------------- */
 .footer-section,
 .footer-section-02 {
-  background: #eef1fb;
-  border-top: 1px solid #e2e7f5;
+  background: #ffffff;
+  border-top: 1px solid #e6eaf2;
 }
 .footer-section .footer-widget-wrap {
-  padding-top: 84px;
-  padding-bottom: 64px;
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+.footer-section .footer-widget,
+.footer-section .footer-widget-about {
+  margin-top: 0;
+}
+/* Theme indents columns 2/3 by 50px; columns now carry their own padding */
+.footer-section .footer-widget.footer-widget-2,
+.footer-section .footer-widget.footer-widget-3 {
+  padding-left: 0;
+}
+
+/* Brand column: logo + blue tagline */
+.footer-section .footer-widget-about p {
+  margin-top: 10px;
+  padding-right: 0;
+  max-width: 340px;
+  color: #1659b0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Columns + thin vertical dividers */
+.footer-section .footer-col {
+  padding-left: 28px;
+}
+.footer-section .footer-col-divider {
+  border-left: 1px solid #d5dbe6;
 }
 
 /* Column headings */
 .footer-section .footer-widget .footer-widget-title {
-  color: #0d294a;
+  color: #1659b0;
   font-weight: 700;
-  font-size: 19px;
-  letter-spacing: -0.3px;
-  margin-bottom: 22px;
-}
-
-/* About blurb */
-.footer-section .footer-widget-about p {
-  color: #5a6b7b;
-  line-height: 1.75;
+  font-size: 17px;
+  letter-spacing: -0.2px;
+  line-height: 1.3;
+  margin-bottom: 16px;
 }
 
 /* Links + plain list items */
+.footer-section .widget-link {
+  padding-top: 0;
+}
 .footer-section .widget-link .link li {
-  color: #5a6b7b;
+  color: #1c2a3a;
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 .footer-section .widget-link .link li a {
-  color: #5a6b7b;
-  transition: color 0.25s ease, padding-left 0.25s ease;
+  color: #1c2a3a;
+  transition: color 0.2s ease;
 }
 .footer-section .widget-link .link li a:hover {
   color: #1680fb;
-  padding-left: 4px;
 }
 
-/* Social icon — white chip that fills brand-blue on hover */
+/* Contact: icon + text rows */
+.footer-section .footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-section .footer-contact-list li i {
+  color: #1659b0;
+  font-size: 14px;
+}
+
+/* Social icons: outlined circles */
+.footer-section .footer-social {
+  margin-top: 14px;
+}
 .footer-section .footer-social .social li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: #ffffff;
-  color: #1680fb;
-  box-shadow: 0 4px 14px rgba(13, 41, 74, 0.08);
-  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  border: 1.5px solid #1659b0;
+  background: transparent;
+  color: #1659b0;
+  font-size: 14px;
+  box-shadow: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .footer-section .footer-social .social li a:hover {
-  background: #1680fb;
+  background: #1659b0;
   color: #ffffff;
-  transform: translateY(-3px);
 }
 
 /* Copyright bar */
 .footer-copyright-area,
 .footer-copyright-area-02 {
   background: transparent;
-  border-top: 1px solid #e2e7f5;
+  border-top: 1px solid #e6eaf2;
 }
 .footer-copyright-area .copyright-text p,
 .footer-copyright-area-02 .copyright-text p {
   color: #6a7a8a;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+/* Tablet/mobile: brand on top, link columns below, no vertical rules */
+@media (max-width: 991px) {
+  .footer-section .footer-widget-about {
+    margin-bottom: 32px;
+  }
+  .footer-section .footer-col {
+    padding-left: 12px;
+    margin-bottom: 24px;
+  }
+  .footer-section .footer-col-divider {
+    border-left: 0;
+  }
 }
 
 /* ---------------------------------------------------------------
