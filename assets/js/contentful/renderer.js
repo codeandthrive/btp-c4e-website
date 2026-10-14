@@ -51,11 +51,21 @@ const ContentRenderer = (function () {
   }
 
   /**
+   * True for absolute http(s) URLs; filters out placeholders like '#'
+   */
+  function isUrl(value) {
+    return typeof value === 'string' && /^https?:\/\//.test(value);
+  }
+
+  /**
    * Render site logo
    */
   async function renderLogo() {
     try {
-      const logoUrl = 'assets/images/logonew.png';
+      const settingsData = await ContentfulClient.getSiteSettings();
+      const logoUrl = (settingsData &&
+        ContentfulClient.resolveAssetUrl(settingsData.entry, 'logo', settingsData.includes)) ||
+        'assets/images/logonew.png';
       document
         .querySelectorAll('.header-logo img, .sidebar__logo img, .footer-logo img')
         .forEach(img => {
@@ -114,57 +124,68 @@ const ContentRenderer = (function () {
    */
   async function renderFooter() {
     try {
-      const [settingsData, locations, navItems] = await Promise.all([
-        ContentfulClient.getSiteSettings(),
-        ContentfulClient.getLocations(),
-        ContentfulClient.getNavigation()
-      ]);
+      // Everything in the footer is edited on the Site Settings entry
+      const settingsData = await ContentfulClient.getSiteSettings();
+      if (!settingsData) return;
+      const settings = settingsData.entry.fields;
 
-      if (settingsData) {
-        const settings = settingsData.entry.fields;
+      const setText = (selector, value) => {
+        const el = document.querySelector(selector);
+        if (el && value) el.textContent = value;
+      };
 
-        // Footer description
-        const footerAbout = document.querySelector('.footer-widget-about p');
-        if (footerAbout && settings.footerDescription) {
-          footerAbout.textContent = settings.footerDescription;
+      // About column
+      setText('.footer-widget-about p', settings.footerDescription);
+
+      const footerLinkedin = document.querySelector('.footer-social a');
+      if (footerLinkedin && isUrl(settings.linkedinUrl)) {
+        footerLinkedin.href = settings.linkedinUrl;
+      }
+
+      // Quick Links column: footerQuickLinks is a JSON list of { title, url }
+      setText('.footer-widget-2 .footer-widget-title', settings.footerQuickLinksTitle);
+      const quickLinks = document.querySelector('.footer-widget-2 ul.link');
+      if (quickLinks && Array.isArray(settings.footerQuickLinks) && settings.footerQuickLinks.length > 0) {
+        quickLinks.replaceChildren(...settings.footerQuickLinks
+          .filter(link => link && link.title && link.url)
+          .map(link => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = link.url;
+            a.textContent = link.title;
+            li.appendChild(a);
+            return li;
+          }));
+      }
+
+      // Contact column
+      setText('.footer-widget-3 .footer-widget-title', settings.footerContactTitle);
+      const contactEmail = document.querySelector('.footer-widget-3 ul.link a[href^="mailto"]');
+      if (contactEmail && settings.email) {
+        contactEmail.href = `mailto:${settings.email}`;
+        contactEmail.textContent = settings.email;
+      }
+
+      // Global Presence column: footerLocations is a list of short text values
+      const locationsContainer = document.querySelector('#footer-locations');
+      if (locationsContainer) {
+        const locationsTitle = locationsContainer.closest('.footer-widget')?.querySelector('.footer-widget-title');
+        if (locationsTitle && settings.footerLocationsTitle) {
+          locationsTitle.textContent = settings.footerLocationsTitle;
         }
-
-        // Copyright
-        const copyright = document.querySelector('.copyright-text p');
-        if (copyright && settings.copyrightText) {
-          copyright.innerHTML = `&copy; ${settings.copyrightText}`;
-        }
-
-        // Contact email
-        const contactEmail = document.querySelector('.footer-widget-3 .link a[href^="mailto"]');
-        if (contactEmail && settings.email) {
-          contactEmail.href = `mailto:${settings.email}`;
-          contactEmail.textContent = settings.email;
+        if (Array.isArray(settings.footerLocations) && settings.footerLocations.length > 0) {
+          locationsContainer.replaceChildren(...settings.footerLocations.map(location => {
+            const li = document.createElement('li');
+            li.textContent = location;
+            return li;
+          }));
         }
       }
 
-      // Global presence locations
-      if (locations.length > 0) {
-        const locationsContainer = document.querySelector('#footer-locations, .footer-widget:last-child .link ul');
-        if (locationsContainer) {
-          locationsContainer.innerHTML = locations.map(loc => {
-            const region = loc.fields.region ? ` (${loc.fields.region})` : '';
-            return `<li>${loc.fields.city}${region}</li>`;
-          }).join('');
-        }
-      }
-
-      // Quick links
-      if (navItems.length > 0) {
-        const quickLinks = document.querySelector('.footer-widget-2 .link ul');
-        if (quickLinks) {
-          const links = navItems
-            .filter(item => !item.fields.isCtaButton && item.fields.url !== 'index.html')
-            .slice(0, 5);
-          quickLinks.innerHTML = links.map(item =>
-            `<li><a href="${item.fields.url}">${item.fields.title}</a></li>`
-          ).join('');
-        }
+      // Copyright bar
+      const copyright = document.querySelector('.copyright-text p');
+      if (copyright && settings.copyrightText) {
+        copyright.innerHTML = `&copy; ${settings.copyrightText}`;
       }
     } catch (error) {
       console.error('Failed to render footer:', error);
@@ -176,10 +197,7 @@ const ContentRenderer = (function () {
    */
   async function renderSidebar() {
     try {
-      const [settingsData, locations] = await Promise.all([
-        ContentfulClient.getSiteSettings(),
-        ContentfulClient.getLocations()
-      ]);
+      const settingsData = await ContentfulClient.getSiteSettings();
 
       if (settingsData) {
         const settings = settingsData.entry.fields;
@@ -199,20 +217,17 @@ const ContentRenderer = (function () {
 
         // Social links
         const linkedinLink = document.querySelector('.sidebar__social a');
-        if (linkedinLink && settings.linkedinUrl) {
+        if (linkedinLink && isUrl(settings.linkedinUrl)) {
           linkedinLink.href = settings.linkedinUrl;
         }
       }
 
-      // Locations in sidebar
-      if (locations.length > 0) {
+      // Locations in sidebar (same Site Settings list as the footer)
+      const sidebarLocations = settingsData && settingsData.entry.fields.footerLocations;
+      if (Array.isArray(sidebarLocations) && sidebarLocations.length > 0) {
         const locationLink = document.querySelector('#sidebar-locations, .sidebar__contact-text a[target="_blank"]');
         if (locationLink) {
-          const cities = locations.map(l => {
-            const region = l.fields.region ? ` (${l.fields.region})` : '';
-            return `${l.fields.city}${region}`;
-          }).join(', ');
-          locationLink.textContent = `Global Presence: ${cities}`;
+          locationLink.textContent = `Global Presence: ${sidebarLocations.join(', ')}`;
         }
       }
     } catch (error) {
