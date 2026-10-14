@@ -445,6 +445,18 @@
 }
 
 /* =================== CONTACT =================== */
+/* Desktop: info column and form centred against each other */
+@media (min-width: 992px) {
+  .contact-section .contact-wrap > .row {
+    align-items: center;
+  }
+  .contact-section .contact-form {
+    margin-top: 0;
+  }
+  .contact-section .single-contact-info:last-child {
+    margin-bottom: 0;
+  }
+}
 .contact-section .section-title2 .title {
   letter-spacing: -1px;
   line-height: 1.1;
