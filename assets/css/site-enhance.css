@@ -483,6 +483,10 @@
 .contact-section .single-contact-info .info-content .title {
   color: #0d294a;
 }
+/* Card text comes from multi-line Contentful fields: keep its line breaks */
+.contact-section .single-contact-info .info-content p {
+  white-space: pre-line;
+}
 .contact-section .contact-form-wrap {
   background: #fff;
   border: 1px solid #e7ebf6;

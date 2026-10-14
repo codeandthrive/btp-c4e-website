@@ -45,7 +45,8 @@
         }
       }
 
-      // Contact info cards (Email Address / Global Presence)
+      // Contact info cards (Email / Address). locationsText is multi-line;
+      // its line breaks are kept by white-space: pre-line in site-enhance.css
       if (contactPage) {
         const setCard = (cardSelector, title, text) => {
           const card = document.querySelector(cardSelector);
@@ -58,7 +59,7 @@
 
         const fields = contactPage.fields;
         setCard('#contact-email-card', fields.emailTitle, fields.email);
-        setCard('#contact-locations-card', fields.locationsTitle, fields.locations);
+        setCard('#contact-locations-card', fields.locationsTitle, fields.locationsText);
       }
 
     } catch (error) {
